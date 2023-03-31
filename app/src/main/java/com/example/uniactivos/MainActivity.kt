@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
 
         // cargando el fragmento de login
         supportFragmentManager.commit {
-            replace<Login>(R.id.frameContainer)
+            replace<LoginFragment>(R.id.frameContainer)
             setReorderingAllowed(true)
             addToBackStack("replacement")
         }
