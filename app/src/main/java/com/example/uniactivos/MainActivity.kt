@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
 
         // cargando el fragmento de login
         supportFragmentManager.commit {
-            replace<LoginFragment>(R.id.frameContainer)
+            replace<TeacherStaticForm>(R.id.frameContainer)
             setReorderingAllowed(true)
             addToBackStack("replacement")
         }
