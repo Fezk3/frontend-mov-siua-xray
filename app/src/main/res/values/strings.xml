@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">Uniactivos</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="my_schedule_title">My Horario</string>
+    <string name="my_schedule_date">Fecha: dd/mm/aa</string>
+    <string name="table_head_aula">Aula</string>
+    <string name="table_head_curso">Curso</string>
+    <string name="table_head_hora_ini">Hora\nInicio</string>
+    <string name="table_head_hora_fin">Hora\nFinal</string>
+    <string name="table_head_check">Check-In</string>
+    <string name="table_head_estado">Estado</string>
 </resources>
