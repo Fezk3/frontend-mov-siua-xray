@@ -14,7 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50sp"
-        android:text="  Entrega de activos estaticos"
+        android:layout_marginLeft="20sp"
+        android:text="  Entrega activos estaticos"
         android:textColor="@color/blue"
         android:textSize="30sp" />
 
