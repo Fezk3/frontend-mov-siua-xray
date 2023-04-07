@@ -3,11 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:visibility="visible"
-    tools:context=".TeacherStaticForm"
-    tools:visibility="visible">
+    tools:context=".TeacherDynamicForm">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
@@ -15,7 +14,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50sp"
         android:layout_marginLeft="20sp"
-        android:text="  Entrega activos estaticos"
+        android:text="  Entrega activos dinamicos"
         android:textColor="@color/blue"
         android:textSize="30sp" />
 
@@ -240,11 +239,14 @@
                 </TableRow>
 
             </TableLayout>
+
             <Button
                 android:id="@+id/button3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Aceptar" />
+
+
         </LinearLayout>
     </LinearLayout>
 
