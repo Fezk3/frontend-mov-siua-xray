@@ -1,12 +1,18 @@
 <resources>
     <string name="app_name">Uniactivos</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <!-- my_schedule_layout -->
     <string name="my_schedule_title">My Horario</string>
     <string name="my_schedule_date">Fecha: dd/mm/aa</string>
-    <string name="table_head_aula">Aula</string>
-    <string name="table_head_curso">Curso</string>
-    <string name="table_head_hora_ini">Hora\nInicio</string>
-    <string name="table_head_hora_fin">Hora\nFinal</string>
+    <string name="table_head_classroom">Aula</string>
+    <string name="table_head_course">Curso</string>
+    <string name="table_head_start_time">Hora\nInicio</string>
+    <string name="table_head_finish_time">Hora\nFinal</string>
     <string name="table_head_check">Check-In</string>
-    <string name="table_head_estado">Estado</string>
+    <string name="table_head_status">Estado</string>
+    <string name="btn_check">Check-In</string>
+    <!-- pending_assets_layout -->
+    <string name="pending_assets_title">Lista de Préstamos\nPendientes</string>
+    <string name="table_head_professor">Profesor</string>
+    <string name="table_head_accept">Aceptar</string>
+    <string name="btn_accept">Aceptar</string>
 </resources>
