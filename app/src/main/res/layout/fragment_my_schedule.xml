@@ -12,8 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50sp"
-        android:layout_marginLeft="130sp"
+        android:layout_marginTop="70sp"
+        android:layout_gravity="top|center"
         android:text="@string/my_schedule_title"
         android:textColor="@color/blue"
         android:textStyle="bold"
@@ -22,7 +22,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="130sp"
+        android:layout_marginTop="150sp"
         android:orientation="vertical">
 
         <TextView
