@@ -13,6 +13,6 @@
     <!-- pending_assets_layout -->
     <string name="pending_assets_title">Lista de Préstamos\nPendientes</string>
     <string name="table_head_professor">Profesor</string>
-    <string name="table_head_accept">Aceptar</string>
-    <string name="btn_accept">Aceptar</string>
+    <string name="table_head_accept">Acción</string>
+    <string name="btn_accept">Entregar</string>
 </resources>
