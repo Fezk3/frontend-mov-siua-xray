@@ -7,7 +7,7 @@
     <string name="table_head_course">Curso</string>
     <string name="table_head_start_time">Hora\nInicio</string>
     <string name="table_head_finish_time">Hora\nFinal</string>
-    <string name="table_head_check">Check-In</string>
+    <string name="table_head_check">Acción</string>
     <string name="table_head_status">Estado</string>
     <string name="btn_check">Check-In</string>
     <!-- pending_assets_layout -->
