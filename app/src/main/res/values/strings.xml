@@ -15,4 +15,16 @@
     <string name="table_head_professor">Profesor</string>
     <string name="table_head_accept">Acción</string>
     <string name="btn_accept">Entregar</string>
+    <!-- receive_statics_layout -->
+    <string name="receive_statics_title">Recibo de activos estaticoss</string>
+    <string name="title_aula">Aula:</string>
+    <string name="title_estado">Estado:</string>
+    <string name="title_profesor">Profesor:</string>
+    <string name="title_guarda">Guarda:</string>
+    <string name="title_fecha">Fecha:</string>
+    <string name="title_hora_inicio">Hora Inicio:</string>
+    <string name="title_hora_fin">Hora Fin:</string>
+    <string name="title_activos_title">Activos:</string>
+    <string name="btn_aceptar">Aceptar</string>
+    <string name="btn_rechazar">Rechazar</string>
 </resources>

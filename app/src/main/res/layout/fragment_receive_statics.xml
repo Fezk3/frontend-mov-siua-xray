@@ -7,13 +7,13 @@
 
     <TextView
         android:id="@+id/titulo"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="  Entrega de activos estaticos"
+        android:text="@string/receive_statics_title"
         android:textSize="30sp"
         android:textColor="@color/blue"
         android:layout_marginTop="60sp"
-        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
         />
 
     <LinearLayout
@@ -34,8 +34,8 @@
                 android:id="@+id/textView18"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="20sp"
-                android:text="Aula:"
+                android:layout_marginStart="20sp"
+                android:text="@string/title_aula"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:background="@drawable/text_border"
@@ -46,7 +46,7 @@
                 android:id="@+id/aula"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8sp"
+                android:layout_marginStart="8sp"
                 android:text="C-18"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -55,8 +55,8 @@
                 android:id="@+id/textView17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="120sp"
-                android:text="Estado:"
+                android:layout_marginStart="120sp"
+                android:text="@string/title_estado"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:background="@drawable/text_border"
@@ -67,7 +67,7 @@
                 android:id="@+id/estado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8sp"
+                android:layout_marginStart="8sp"
                 android:text="Recibido"
                 android:layout_marginRight="15sp"
                 android:textColor="@color/black"
@@ -88,7 +88,7 @@
                 android:id="@+id/textView15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Profesor:"
+                android:text="@string/title_profesor"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:background="@drawable/text_border"
@@ -100,7 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Marvin"
-                android:layout_marginLeft="8sp"
+                android:layout_marginStart="8sp"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 />
@@ -109,9 +109,9 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Guarda:"
+                android:text="@string/title_guarda"
                 android:textColor="@color/black"
-                android:layout_marginLeft="60sp"
+                android:layout_marginStart="60sp"
                 android:textSize="20sp"
                 android:background="@drawable/text_border"
                 android:padding="2sp"
@@ -122,7 +122,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Juan"
-                android:layout_marginLeft="8sp"
+                android:layout_marginStart="8sp"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 />
@@ -142,7 +142,7 @@
                 android:id="@+id/textView14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hora inicio:"
+                android:text="@string/title_hora_inicio"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:background="@drawable/text_border"
@@ -152,7 +152,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8sp"
+                android:layout_marginStart="8sp"
                 android:text="11:00"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -161,8 +161,8 @@
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30sp"
-                android:text="Hora final:"
+                android:layout_marginStart="30sp"
+                android:text="@string/title_hora_fin"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:background="@drawable/text_border"
@@ -172,7 +172,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8sp"
+                android:layout_marginStart="8sp"
                 android:text="11:00"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -190,7 +190,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Fecha:"
+                android:text="@string/title_fecha"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:background="@drawable/text_border"
@@ -200,7 +200,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8sp"
+                android:layout_marginStart="8sp"
                 android:text="23/04/12"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
@@ -217,9 +217,8 @@
                 android:id="@+id/activos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
                 android:layout_marginTop="15sp"
-                android:text="Activos"
+                android:text="@string/title_activos_title"
                 android:textColor="@color/blue"
                 android:textSize="30sp" />
 
@@ -297,7 +296,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/blue"
-            android:text="Aceptar"
+            android:text="@string/btn_aceptar"
             android:textColor="@color/white"
             android:textSize="20sp" />
 
@@ -305,11 +304,12 @@
             android:id="@+id/buttonRechazarActivos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40sp"
+            android:layout_marginStart="40sp"
             android:background="@color/orange"
-            android:text="Rechazar"
+            android:text="@string/btn_rechazar"
             android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            />
 
     </LinearLayout>
 
