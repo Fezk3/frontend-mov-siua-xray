@@ -28,4 +28,6 @@
     <string name="title_activos_title">Activos:</string>
     <string name="btn_aceptar">Aceptar</string>
     <string name="btn_rechazar">Rechazar</string>
+    <string name="table_head_name">Nombre</string>
+    <string name="table_head_cantidad">Cantidad</string>
 </resources>

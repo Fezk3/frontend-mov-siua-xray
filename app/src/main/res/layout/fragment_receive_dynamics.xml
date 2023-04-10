@@ -229,7 +229,7 @@
 
                     <TableRow android:background="@color/black" >
                         <TextView
-                            android:text="Nombre"
+                            android:text="@string/table_head_name"
                             android:textColor="@color/white"
                             android:textSize="18sp"
                             android:textStyle="bold"
@@ -238,7 +238,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                         <TextView
-                            android:text="Cantidad"
+                            android:text="@string/table_head_cantidad"
                             android:textColor="@color/white"
                             android:textStyle="bold"
                             android:textSize="18sp"
