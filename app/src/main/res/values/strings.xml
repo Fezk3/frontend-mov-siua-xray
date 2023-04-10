@@ -15,8 +15,9 @@
     <string name="table_head_professor">Profesor</string>
     <string name="table_head_accept">Acción</string>
     <string name="btn_accept">Entregar</string>
-    <!-- receive_statics_layout -->
+    <!-- receive_statics/dynamics_layouts -->
     <string name="receive_statics_title">Recibo de activos estaticos</string>
+    <string name="receive_dynamics_title">Recibo de activos dinamicos</string>
     <string name="title_aula">Aula:</string>
     <string name="title_estado">Estado:</string>
     <string name="title_profesor">Profesor:</string>
