@@ -18,6 +18,8 @@
     <!-- receive_statics/dynamics_layouts -->
     <string name="receive_statics_title">Recibo de activos estaticos</string>
     <string name="receive_dynamics_title">Recibo de activos dinamicos</string>
+    <string name="title_entrega_activos_dinamicos">Entrega de Activos Dinamicos</string>
+    <string name="title_entrega_activos_estaticos">Entrega de Activos Estaticos</string>
     <string name="title_aula">Aula:</string>
     <string name="title_estado">Estado:</string>
     <string name="title_profesor">Profesor:</string>
