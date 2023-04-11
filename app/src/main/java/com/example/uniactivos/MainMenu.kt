@@ -21,9 +21,14 @@ class MainMenu : Fragment(R.layout.fragment_main_menu) {
         super.onViewCreated(view, savedInstanceState)
 
         var btnAula = view.findViewById<View>(R.id.cardViewAula)
+        var btnActivosProfesor = view.findViewById<View>(R.id.cardViewReciboProfesor)
 
         btnAula.setOnClickListener{
             findNavController().navigate(R.id.action_mainMenu_to_mySchedule)
+        }
+
+        btnActivosProfesor.setOnClickListener{
+            findNavController().navigate(R.id.action_mainMenu_to_teacherDynamicForm)
         }
     }
 }

@@ -21,10 +21,31 @@
         <action
             android:id="@+id/action_mainMenu_to_mySchedule"
             app:destination="@id/mySchedule" />
+        <action
+            android:id="@+id/action_mainMenu_to_teacherDynamicForm"
+            app:destination="@id/teacherDynamicForm" />
     </fragment>
     <fragment
         android:id="@+id/mySchedule"
         android:name="com.example.uniactivos.MySchedule"
         android:label="fragment_my_schedule"
         tools:layout="@layout/fragment_my_schedule" />
+    <fragment
+        android:id="@+id/teacherDynamicForm"
+        android:name="com.example.uniactivos.TeacherDynamicForm"
+        android:label="fragment_teacher_dynamic_form"
+        tools:layout="@layout/fragment_teacher_dynamic_form" >
+        <action
+            android:id="@+id/action_teacherDynamicForm_to_teacherStaticForm"
+            app:destination="@id/teacherStaticForm" />
+    </fragment>
+    <fragment
+        android:id="@+id/teacherStaticForm"
+        android:name="com.example.uniactivos.TeacherStaticForm"
+        android:label="fragment_teacher_static_form"
+        tools:layout="@layout/fragment_teacher_static_form" >
+        <action
+            android:id="@+id/action_teacherStaticForm_to_mainMenu"
+            app:destination="@id/mainMenu" />
+    </fragment>
 </navigation>
