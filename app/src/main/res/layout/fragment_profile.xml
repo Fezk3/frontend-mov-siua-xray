@@ -6,60 +6,119 @@
     tools:context=".Profile">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top|center"
-        android:text="Perfil de usuario"
+        android:text="@string/profile_title"
         android:layout_marginTop="90sp"
         android:layout_marginBottom="10sp"
         android:textColor="@color/black"
         android:textSize="40sp" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="377dp"
-        android:layout_marginLeft="35sp"
-        android:layout_marginTop="90sp"
-        android:gravity="center|start|left"
+        android:layout_width="match_parent"
+        android:layout_marginTop="180dp"
+        android:layout_height="280dp"
+        android:below="@+id/textView"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="200px"
-            android:layout_marginBottom="100px"
-            android:text="Cedula: "
-            android:textSize="20sp"
-            android:textColor="@color/black" />
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="100px"
-            android:text="Nombre:"
-            android:textSize="20sp"
-            android:textColor="@color/black" />
 
-        <TextView
-            android:id="@+id/textView5"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="100px"
-            android:text="Apellidos: "
-            android:textSize="20sp"
-            android:textColor="@color/black" />
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textView6"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/subtitle_cedual"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:layout_marginStart="20sp"
+                />
+            <TextView
+                android:id="@+id/cedulabase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2010212"
+                android:textColor="@color/black"
+                android:layout_marginStart="10sp"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="100px"
-            android:text="Rol:"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:orientation="horizontal"
+            android:layout_marginTop="35sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/subtitle_nombre"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:layout_marginStart="20sp"
+                />
+            <TextView
+                android:id="@+id/nombrebase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Juan"
+                android:textColor="@color/black"
+                android:layout_marginStart="10sp"
+                android:textSize="25sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="35sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/subtitle_apellido"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:layout_marginStart="20sp"
+                />
+            <TextView
+                android:id="@+id/apellidobase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fernandez"
+                android:textColor="@color/black"
+                android:layout_marginStart="10sp"
+                android:textSize="25sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="35sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/subtitle_rol"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:layout_marginStart="20sp"
+                />
+            <TextView
+                android:id="@+id/Rolbase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profesor"
+                android:textColor="@color/black"
+                android:layout_marginStart="10sp"
+                android:textSize="25sp" />
+        </LinearLayout>
     </LinearLayout>
 
     <Button
@@ -67,54 +126,9 @@
         android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="105sp"
-        android:text="Cambiar contraseña" />
+        android:layout_marginTop="125sp"
+        android:textSize="15sp"
+        android:text="@string/btn_cambiar_contrasena" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="130sp"
-        android:layout_marginTop="250px"
-        android:orientation="vertical"
-        >
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="240px"
-            android:text=""
-            android:textColor="@color/black"
-            android:textSize="20sp"
-        />
-
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="102px"
-            android:text=""
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="95px"
-            android:text=""
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="105px"
-            android:text=""
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-    </LinearLayout>
 
 </FrameLayout>
