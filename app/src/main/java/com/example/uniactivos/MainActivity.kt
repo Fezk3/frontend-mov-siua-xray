@@ -9,13 +9,5 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        // cargando el fragmento de login
-        supportFragmentManager.commit {
-            replace<LoginFragment>(R.id.frameContainer)
-            setReorderingAllowed(true)
-            addToBackStack("replacement")
-        }
-
     }
 }
