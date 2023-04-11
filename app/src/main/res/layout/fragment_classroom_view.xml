@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClassroomViewFragment">
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        tools:context=".TeacherStaticForm"
+        tools:visibility="visible">
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:id="@+id/tituloPrincipal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50sp"
+            android:layout_gravity="center|top"
+            android:text="@string/title_principal"
+            android:textColor="@color/blue"
+            android:textSize="30sp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100sp"
+            android:layout_marginTop="120sp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="25sp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/titleAula"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/subtitle_aula"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:background="@drawable/text_border"
+                    android:padding="2sp"
+                    />
+
+                <TextView
+                    android:id="@+id/titleaula"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1sp"
+                    android:text="C-18"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    />
+
+                <TextView
+                    android:id="@+id/subtitleEstado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50sp"
+                    android:text="@string/subtitle_estado"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:background="@drawable/text_border"
+                    android:padding="2sp"/>
+
+                <TextView
+                    android:id="@+id/ocupado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1sp"
+                    android:text="Ocupado"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/titleFecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/title_fecha"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:background="@drawable/text_border"
+                    android:padding="2sp"
+                    />
+
+                <TextView
+                    android:id="@+id/fecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8sp"
+                    android:text="23/04/12"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutprin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="25sp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutT"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="25sp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutsecond"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="400sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/activos_estatico"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:text="@string/title_activosD"
+                    android:textColor="@color/blue"
+                    android:textSize="30sp" />
+
+                <TableLayout
+                    android:id="@+id/tableLayout_activos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*"
+                    android:padding="16dp"
+                    tools:ignore="UselessParent,VisualLintBounds">
+
+                    <TableRow android:background="@color/black" >
+                        <TextView
+                            android:text="@string/table_head_name"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_column="1"
+                            android:padding="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="@string/table_head_cantidad"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_column="2"
+                            android:padding="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </TableRow>
+
+                    <TableRow android:background="@color/gray_blue">
+                        <TextView
+                            android:text="Dato 1"
+                            android:textSize="18sp"
+                            android:textColor="@color/black"
+                            android:layout_column="1"
+                            android:padding="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"  />
+                        <TextView
+                            android:text="Dato 2"
+                            android:textSize="18sp"
+                            android:textColor="@color/black"
+                            android:layout_column="2"
+                            android:padding="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"  />
+                    </TableRow>
+
+                </TableLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="142dp"
+                android:layout_marginTop="150sp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/activosDinamicos_dinamicos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:text="@string/title_activosD"
+                    android:textColor="@color/blue"
+                    android:textSize="30sp" />
+
+                <TableLayout
+                    android:id="@+id/tableLayout_activos_Estaticos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*"
+                    android:padding="16dp"
+                    tools:ignore="UselessParent,VisualLintBounds">
+
+                    <TableRow android:background="@color/black" >
+                        <TextView
+                            android:text="@string/table_head_name"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_column="1"
+                            android:padding="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="@string/table_head_cantidad"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_column="2"
+                            android:padding="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </TableRow>
+
+                    <TableRow android:background="@color/gray_blue">
+                        <TextView
+                            android:text="Dato 1"
+                            android:textSize="18sp"
+                            android:textColor="@color/black"
+                            android:layout_column="1"
+                            android:padding="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"  />
+                        <TextView
+                            android:text="Dato 2"
+                            android:textSize="18sp"
+                            android:textColor="@color/black"
+                            android:layout_column="2"
+                            android:padding="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"  />
+                    </TableRow>
+
+                </TableLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+    </FrameLayout>
+</FrameLayout>

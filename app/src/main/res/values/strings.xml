@@ -39,4 +39,14 @@
     <string name="subtitle_nombre">Nombre:</string>
     <string name="subtitle_apellido">Apellido:</string>
     <string name="subtitle_rol">Rol:</string>
+    <!--Classroom view -->
+    <string name="subtitle_aula">Aula:</string>
+    <string name="title_principal">Entrega de activos estaticos</string>
+    <string name="title_activosE">Activos Estaticos</string>
+    <string name="title_activosD">Activos Dinamicos</string>
+    <string name="subtitle_estado">Estado :</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
 </resources>
