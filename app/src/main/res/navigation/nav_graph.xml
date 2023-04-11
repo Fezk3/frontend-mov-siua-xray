@@ -17,5 +17,14 @@
         android:id="@+id/mainMenu"
         android:name="com.example.uniactivos.MainMenu"
         android:label="fragment_main_menu"
-        tools:layout="@layout/fragment_main_menu" />
+        tools:layout="@layout/fragment_main_menu" >
+        <action
+            android:id="@+id/action_mainMenu_to_mySchedule"
+            app:destination="@id/mySchedule" />
+    </fragment>
+    <fragment
+        android:id="@+id/mySchedule"
+        android:name="com.example.uniactivos.MySchedule"
+        android:label="fragment_my_schedule"
+        tools:layout="@layout/fragment_my_schedule" />
 </navigation>
