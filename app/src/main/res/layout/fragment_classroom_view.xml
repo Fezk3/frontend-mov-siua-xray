@@ -28,8 +28,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100sp"
-            android:layout_marginTop="120sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30sp"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -169,8 +169,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:stretchColumns="*"
-                    android:padding="16dp"
-                    tools:ignore="UselessParent,VisualLintBounds">
+                    android:padding="16dp">
 
                     <TableRow android:background="@color/black" >
                         <TextView
@@ -219,25 +218,24 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="142dp"
-                android:layout_marginTop="150sp"
+                android:layout_marginTop="80sp"
                 android:gravity="center"
                 android:orientation="vertical">
                 <TextView
-                    android:id="@+id/activosDinamicos_dinamicos"
+                    android:id="@+id/activosDinamicos_estaticos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5sp"
-                    android:text="@string/title_activosD"
+                    android:text="@string/title_activosE"
                     android:textColor="@color/blue"
                     android:textSize="30sp" />
 
                 <TableLayout
-                    android:id="@+id/tableLayout_activos_Estaticos"
+                    android:id="@+id/title_activosEst"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:stretchColumns="*"
-                    android:padding="16dp"
-                    tools:ignore="UselessParent,VisualLintBounds">
+                    android:padding="16dp">
 
                     <TableRow android:background="@color/black" >
                         <TextView
