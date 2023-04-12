@@ -22,6 +22,7 @@ class MainMenu : Fragment(R.layout.fragment_main_menu) {
 
         var btnAula = view.findViewById<View>(R.id.cardViewAula)
         var btnActivosProfesor = view.findViewById<View>(R.id.cardViewReciboProfesor)
+        var btnReciboGuardas = view.findViewById<View>(R.id.cardreciboGuardas)
 
         btnAula.setOnClickListener{
             findNavController().navigate(R.id.action_mainMenu_to_mySchedule)
@@ -29,6 +30,9 @@ class MainMenu : Fragment(R.layout.fragment_main_menu) {
 
         btnActivosProfesor.setOnClickListener{
             findNavController().navigate(R.id.action_mainMenu_to_teacherDynamicForm)
+        }
+        btnReciboGuardas.setOnClickListener{
+            findNavController().navigate(R.id.action_mainMenu_to_pendingAssets5)
         }
     }
 }
