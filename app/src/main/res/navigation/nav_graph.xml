@@ -4,6 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/mainMenu">
+    <action
+        android:id="@+id/action_mainMenu_to_mySchedule"
+        app:destination="@id/mySchedule" />
+    <action
+        android:id="@+id/action_mainMenu_to_teacherDynamicForm"
+        app:destination="@id/teacherDynamicForm" />
+    <action
+        android:id="@+id/action_teacherStaticForm_to_mainMenu"
+        app:destination="@id/mainMenu" />
     <fragment
         android:id="@+id/mainMenu"
         android:name="com.example.uniactivos.MainMenu"
@@ -37,6 +46,20 @@
         tools:layout="@layout/fragment_teacher_static_form" >
         <action
             android:id="@+id/action_teacherStaticForm_to_mainMenu"
+            app:destination="@id/mainMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile2"
+        android:name="com.example.uniactivos.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.example.uniactivos.LoginFragment"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" >
+        <action
+            android:id="@+id/action_loginFragment2_to_mainMenu"
             app:destination="@id/mainMenu" />
     </fragment>
 </navigation>

@@ -13,7 +13,7 @@ class MenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.contenedor2) as NavHostFragment
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.contenedor1) as NavHostFragment
         val navController = navHostFragment.navController
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         bottomNavigationView.setupWithNavController(navController)

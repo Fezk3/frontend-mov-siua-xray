@@ -7,26 +7,32 @@
     tools:context=".MenuActivity">
 
 
-
     <fragment
-        android:id="@+id/contenedor2"
+        android:id="@+id/contenedor1"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:defaultNavHost="true"
-        app:navGraph="@navigation/nav_graph" />
+        app:navGraph="@navigation/nav_graph"
+        />
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
-        android:layout_height="91dp"
+        android:layout_height="80dp"
         android:layout_gravity="bottom"
         app:menu="@menu/navegation"
         android:background="@color/blue"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
         app:itemIconSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainContainer"
+        app:layout_constraintVertical_bias="0.5"
         />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
