@@ -25,9 +25,11 @@ class MainMenu : Fragment(R.layout.fragment_main_menu) {
         var btnReciboGuardas = view.findViewById<View>(R.id.cardreciboGuardas)
         var btnListaGuardas = view.findViewById<View>(R.id.cardViewReportesGuardas)
         var btnListaAulas = view.findViewById<View>(R.id.cardViewListaAulas)
+        var btnReportesPending = view.findViewById<View>(R.id.cardViewReportesGuardasPending)
 
 
         btnAula.setOnClickListener{
+            findNavController().navigate(R.id.action_mainMenu_to_aulas)
         }
 
         btnActivosProfesor.setOnClickListener{
@@ -39,7 +41,12 @@ class MainMenu : Fragment(R.layout.fragment_main_menu) {
         btnListaAulas.setOnClickListener{
             findNavController().navigate(R.id.action_mainMenu_to_aulas)
         }
-
+        btnReciboGuardas.setOnClickListener{
+            findNavController().navigate(R.id.action_mainMenu_to_pendingAssets)
+        }
+        btnReportesPending.setOnClickListener{
+            findNavController().navigate(R.id.action_mainMenu_to_reports)
+        }
 
     }
 }

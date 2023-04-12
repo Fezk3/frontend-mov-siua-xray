@@ -65,4 +65,5 @@
     <string name="subtitle_HoraFinal">Hora Final</string>
     <string name="btn_Detalle">Detalle</string>
     <string name="tittle_ListaAulas">Lista de Aulas por Universidad</string>
+    <string name="btn_volver">Volver</string>
 </resources>

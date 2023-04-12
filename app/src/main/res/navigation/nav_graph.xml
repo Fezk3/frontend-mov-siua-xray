@@ -30,6 +30,12 @@
         <action
             android:id="@+id/action_mainMenu_to_aulas"
             app:destination="@id/aulas" />
+        <action
+            android:id="@+id/action_mainMenu_to_pendingAssets"
+            app:destination="@id/pendingAssets" />
+        <action
+            android:id="@+id/action_mainMenu_to_reports"
+            app:destination="@id/reports" />
     </fragment>
     <fragment
         android:id="@+id/mySchedule"
@@ -77,5 +83,45 @@
         android:id="@+id/aulas"
         android:name="com.example.uniactivos.Aulas"
         android:label="fragment_aulas"
-        tools:layout="@layout/fragment_aulas" />
+        tools:layout="@layout/fragment_aulas" >
+        <action
+            android:id="@+id/action_aulas_to_classroomViewFragment"
+            app:destination="@id/classroomViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pendingAssets"
+        android:name="com.example.uniactivos.PendingAssets"
+        android:label="fragment_pending_assets"
+        tools:layout="@layout/fragment_pending_assets" >
+        <action
+            android:id="@+id/action_pendingAssets_to_receiveStatics"
+            app:destination="@id/receiveStatics" />
+    </fragment>
+    <fragment
+        android:id="@+id/classroomViewFragment"
+        android:name="com.example.uniactivos.ClassroomViewFragment"
+        android:label="fragment_classroom_view"
+        tools:layout="@layout/fragment_classroom_view" >
+        <action
+            android:id="@+id/action_classroomViewFragment_to_mainMenu"
+            app:destination="@id/mainMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/reports"
+        android:name="com.example.uniactivos.Reports"
+        android:label="fragment_reports"
+        tools:layout="@layout/fragment_reports" >
+        <action
+            android:id="@+id/action_reports_to_mainMenu"
+            app:destination="@id/mainMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/receiveStatics"
+        android:name="com.example.uniactivos.ReceiveStatics"
+        android:label="fragment_receive_dynamics"
+        tools:layout="@layout/fragment_receive_dynamics" >
+        <action
+            android:id="@+id/action_receiveStatics_to_mainMenu"
+            app:destination="@id/mainMenu" />
+    </fragment>
 </navigation>
