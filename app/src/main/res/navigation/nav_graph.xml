@@ -24,6 +24,12 @@
         <action
             android:id="@+id/action_mainMenu_to_teacherDynamicForm"
             app:destination="@id/teacherDynamicForm" />
+        <action
+            android:id="@+id/action_mainMenu_to_guardReports"
+            app:destination="@id/guardReports" />
+        <action
+            android:id="@+id/action_mainMenu_to_aulas"
+            app:destination="@id/aulas" />
     </fragment>
     <fragment
         android:id="@+id/mySchedule"
@@ -62,4 +68,14 @@
             android:id="@+id/action_loginFragment2_to_mainMenu"
             app:destination="@id/mainMenu" />
     </fragment>
+    <fragment
+        android:id="@+id/guardReports"
+        android:name="com.example.uniactivos.GuardReports"
+        android:label="fragment_guard_reports"
+        tools:layout="@layout/fragment_guard_reports" />
+    <fragment
+        android:id="@+id/aulas"
+        android:name="com.example.uniactivos.Aulas"
+        android:label="fragment_aulas"
+        tools:layout="@layout/fragment_aulas" />
 </navigation>
