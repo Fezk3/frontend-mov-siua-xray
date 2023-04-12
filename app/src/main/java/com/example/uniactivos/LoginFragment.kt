@@ -22,8 +22,5 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         super.onViewCreated(view, savedInstanceState)
         var btnLogin = view.findViewById<View>(R.id.btnLoginIrMenu)
 
-        btnLogin.setOnClickListener{
-            findNavController().navigate(R.id.action_loginFragment_to_mainMenu)
-        }
     }
 }

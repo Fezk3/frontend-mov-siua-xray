@@ -3,16 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/loginFragment">
-    <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.example.uniactivos.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
-        <action
-            android:id="@+id/action_loginFragment_to_mainMenu"
-            app:destination="@id/mainMenu" />
-    </fragment>
+    app:startDestination="@id/mainMenu">
     <fragment
         android:id="@+id/mainMenu"
         android:name="com.example.uniactivos.MainMenu"
