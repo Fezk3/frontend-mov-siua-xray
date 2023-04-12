@@ -31,8 +31,5 @@ class MainMenu : Fragment(R.layout.fragment_main_menu) {
         btnActivosProfesor.setOnClickListener{
             findNavController().navigate(R.id.action_mainMenu_to_teacherDynamicForm)
         }
-        btnReciboGuardas.setOnClickListener{
-            findNavController().navigate(R.id.action_mainMenu_to_pendingAssets5)
-        }
     }
 }
