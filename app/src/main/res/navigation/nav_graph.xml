@@ -15,6 +15,9 @@
         <action
             android:id="@+id/action_mainMenu_to_teacherDynamicForm"
             app:destination="@id/teacherDynamicForm" />
+        <action
+            android:id="@+id/action_mainMenu_to_pendingAssets5"
+            app:destination="@id/pendingAssets5" />
     </fragment>
     <fragment
         android:id="@+id/mySchedule"
@@ -39,4 +42,9 @@
             android:id="@+id/action_teacherStaticForm_to_mainMenu"
             app:destination="@id/mainMenu" />
     </fragment>
+    <fragment
+        android:id="@+id/pendingAssets5"
+        android:name="com.example.uniactivos.PendingAssets"
+        android:label="fragment_pending_assets"
+        tools:layout="@layout/fragment_pending_assets" />
 </navigation>
