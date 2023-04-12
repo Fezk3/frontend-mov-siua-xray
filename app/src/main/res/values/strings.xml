@@ -45,8 +45,10 @@
     <string name="title_activosE">Activos Estaticos</string>
     <string name="title_activosD">Activos Dinamicos</string>
     <string name="subtitle_estado">Estado :</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
-
+    <!--reports view -->
+    <string name="reports_coming_soon">Página de Reportes disponible proximamente</string>
+    <!--Forgot pass view -->
+    <string name="forgot_pass_title">¿Olvidó su Contraseña?</string>
+    <string name="place_holder_email">Correo</string>
+    <string name="btn_send_pass">Enviar</string>
 </resources>
