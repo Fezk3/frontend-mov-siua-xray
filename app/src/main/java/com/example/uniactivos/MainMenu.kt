@@ -33,7 +33,7 @@ class MainMenu : Fragment(R.layout.fragment_main_menu) {
         }
 
         btnActivosProfesor.setOnClickListener{
-            findNavController().navigate(R.id.action_mainMenu_to_teacherDynamicForm)
+            findNavController().navigate(R.id.action_mainMenu_to_mySchedule)
         }
         btnListaGuardas.setOnClickListener{
             findNavController().navigate(R.id. action_mainMenu_to_guardReports)

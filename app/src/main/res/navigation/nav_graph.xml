@@ -22,9 +22,6 @@
             android:id="@+id/action_mainMenu_to_mySchedule"
             app:destination="@id/mySchedule" />
         <action
-            android:id="@+id/action_mainMenu_to_teacherDynamicForm"
-            app:destination="@id/teacherDynamicForm" />
-        <action
             android:id="@+id/action_mainMenu_to_guardReports"
             app:destination="@id/guardReports" />
         <action
@@ -41,7 +38,14 @@
         android:id="@+id/mySchedule"
         android:name="com.example.uniactivos.MySchedule"
         android:label="fragment_my_schedule"
-        tools:layout="@layout/fragment_my_schedule" />
+        tools:layout="@layout/fragment_my_schedule" >
+        <action
+            android:id="@+id/action_mySchedule_to_teacherDynamicForm"
+            app:destination="@id/teacherDynamicForm" />
+        <action
+            android:id="@+id/action_mainMenu_to_teacherDynamicForm"
+            app:destination="@id/teacherDynamicForm" />
+    </fragment>
     <fragment
         android:id="@+id/teacherDynamicForm"
         android:name="com.example.uniactivos.TeacherDynamicForm"
@@ -119,9 +123,5 @@
         android:id="@+id/receiveStatics"
         android:name="com.example.uniactivos.ReceiveStatics"
         android:label="fragment_receive_dynamics"
-        tools:layout="@layout/fragment_receive_dynamics" >
-        <action
-            android:id="@+id/action_receiveStatics_to_mainMenu"
-            app:destination="@id/mainMenu" />
-    </fragment>
+        tools:layout="@layout/fragment_receive_dynamics" />
 </navigation>
