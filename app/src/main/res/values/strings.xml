@@ -41,7 +41,7 @@
     <string name="subtitle_rol">Rol:</string>
     <!--Classroom view -->
     <string name="subtitle_aula">Aula:</string>
-    <string name="title_principal">Entrega de activos estaticos</string>
+    <string name="title_principal">Detalle de activos del aula</string>
     <string name="title_activosE">Activos Estaticos</string>
     <string name="title_activosD">Activos Dinamicos</string>
     <string name="subtitle_estado">Estado :</string>

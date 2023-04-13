@@ -17,7 +17,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [PasswordChange.newInstance] factory method to
  * create an instance of this fragment.
  */
-class PasswordChange : Fragment(R.layout.fragment_pending_assets) {
+class PasswordChange : Fragment(R.layout.fragment_password_change) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
