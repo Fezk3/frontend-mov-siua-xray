@@ -123,5 +123,17 @@
         android:id="@+id/receiveStatics"
         android:name="com.example.uniactivos.ReceiveStatics"
         android:label="fragment_receive_dynamics"
-        tools:layout="@layout/fragment_receive_dynamics" />
+        tools:layout="@layout/fragment_receive_dynamics" >
+        <action
+            android:id="@+id/action_receiveStatics_to_receiveDynamics"
+            app:destination="@id/receiveDynamics" />
+    </fragment>
+    <fragment
+        android:id="@+id/receiveDynamics"
+        android:name="com.example.uniactivos.ReceiveDynamics"
+        android:label="ReceiveDynamics" >
+        <action
+            android:id="@+id/action_receiveDynamics_to_pendingAssets"
+            app:destination="@id/pendingAssets" />
+    </fragment>
 </navigation>

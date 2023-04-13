@@ -16,13 +16,9 @@ class ReceiveStatics : Fragment(R.layout.fragment_receive_statics) {
         super.onViewCreated(view, savedInstanceState)
 
         var btnAceptar = view.findViewById<View>(R.id.buttonAceptarActivos)
-        var btnRechazar = view.findViewById<View>(R.id.buttonRechazarActivos)
 
         btnAceptar.setOnClickListener {
-            findNavController().navigate(R.id.action_receiveStatics_to_mainMenu)
-        }
-        btnRechazar.setOnClickListener {
-            findNavController().navigate(R.id.action_receiveStatics_to_mainMenu)
+            findNavController().navigate(R.id.action_receiveStatics_to_receiveDynamics)
         }
     }
 }
