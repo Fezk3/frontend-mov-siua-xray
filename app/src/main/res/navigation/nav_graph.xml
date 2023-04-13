@@ -68,7 +68,11 @@
         android:id="@+id/profile2"
         android:name="com.example.uniactivos.Profile"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profile2_to_passwordChange"
+            app:destination="@id/passwordChange" />
+    </fragment>
     <fragment
         android:id="@+id/loginFragment2"
         android:name="com.example.uniactivos.LoginFragment"
@@ -135,5 +139,14 @@
         <action
             android:id="@+id/action_receiveDynamics_to_pendingAssets"
             app:destination="@id/pendingAssets" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordChange"
+        android:name="com.example.uniactivos.PasswordChange"
+        android:label="fragment_password_change"
+        tools:layout="@layout/fragment_password_change" >
+        <action
+            android:id="@+id/action_passwordChange_to_profile2"
+            app:destination="@id/profile2" />
     </fragment>
 </navigation>

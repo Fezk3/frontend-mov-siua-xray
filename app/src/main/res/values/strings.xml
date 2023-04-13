@@ -66,4 +66,12 @@
     <string name="btn_Detalle">Detalle</string>
     <string name="tittle_ListaAulas">Lista de Aulas por Universidad</string>
     <string name="btn_volver">Volver</string>
+    <!--Change pass view-->
+    <string name="uniactivos_title">UNIACTIVOS</string>
+    <string name="place_holder_current_pass">Contraseña Anterior</string>
+    <string name="place_holder_new_pass">Contraseña Nueva</string>
+    <string name="place_holder_repeat_pass">Contraseña Nueva Otra vez</string>
+    <string name="txt_btn_change_pass">Cambiar Contraseña</string>
+    <string name="txt_subtitle_change_pass">Cambio de Contraseña</string>
+    <string name="txt_professor">Profesor</string>
 </resources>
