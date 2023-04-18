@@ -138,7 +138,7 @@
         android:label="ReceiveDynamics" >
         <action
             android:id="@+id/action_receiveDynamics_to_pendingAssets"
-            app:destination="@id/pendingAssets" />
+            app:destination="@id/mainMenu" />
     </fragment>
     <fragment
         android:id="@+id/passwordChange"
