@@ -1,11 +1,10 @@
-package com.example.uniactivos
+package com.example.uniactivos.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.commit
-import androidx.fragment.app.replace
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.example.uniactivos.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MenuActivity : AppCompatActivity() {

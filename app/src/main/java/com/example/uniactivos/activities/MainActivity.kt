@@ -1,12 +1,10 @@
-package com.example.uniactivos
+package com.example.uniactivos.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
-import androidx.fragment.app.commit
-import androidx.fragment.app.replace
+import com.example.uniactivos.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
