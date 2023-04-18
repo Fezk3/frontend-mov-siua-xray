@@ -1,15 +1,10 @@
-package com.example.uniactivos
+package com.example.uniactivos.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.TableLayout
-import android.widget.TableRow
-import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-
+import com.example.uniactivos.R
 
 class ReceiveStatics : Fragment(R.layout.fragment_receive_statics) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

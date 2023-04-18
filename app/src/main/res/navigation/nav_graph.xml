@@ -15,7 +15,7 @@
         app:destination="@id/mainMenu" />
     <fragment
         android:id="@+id/mainMenu"
-        android:name="com.example.uniactivos.MainMenu"
+        android:name="com.example.uniactivos.fragments.MainMenu"
         android:label="fragment_main_menu"
         tools:layout="@layout/fragment_main_menu" >
         <action
@@ -36,7 +36,7 @@
     </fragment>
     <fragment
         android:id="@+id/mySchedule"
-        android:name="com.example.uniactivos.MySchedule"
+        android:name="com.example.uniactivos.fragments.MySchedule"
         android:label="fragment_my_schedule"
         tools:layout="@layout/fragment_my_schedule" >
         <action
@@ -48,7 +48,7 @@
     </fragment>
     <fragment
         android:id="@+id/teacherDynamicForm"
-        android:name="com.example.uniactivos.TeacherDynamicForm"
+        android:name="com.example.uniactivos.fragments.TeacherDynamicForm"
         android:label="fragment_teacher_dynamic_form"
         tools:layout="@layout/fragment_teacher_dynamic_form" >
         <action
@@ -57,7 +57,7 @@
     </fragment>
     <fragment
         android:id="@+id/teacherStaticForm"
-        android:name="com.example.uniactivos.TeacherStaticForm"
+        android:name="com.example.uniactivos.fragments.TeacherStaticForm"
         android:label="fragment_teacher_static_form"
         tools:layout="@layout/fragment_teacher_static_form" >
         <action
@@ -66,7 +66,7 @@
     </fragment>
     <fragment
         android:id="@+id/profile2"
-        android:name="com.example.uniactivos.Profile"
+        android:name="com.example.uniactivos.fragments.Profile"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
@@ -75,7 +75,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment2"
-        android:name="com.example.uniactivos.LoginFragment"
+        android:name="com.example.uniactivos.fragments.LoginFragment"
         android:label="activity_main"
         tools:layout="@layout/activity_main" >
         <action
@@ -84,12 +84,12 @@
     </fragment>
     <fragment
         android:id="@+id/guardReports"
-        android:name="com.example.uniactivos.GuardReports"
+        android:name="com.example.uniactivos.fragments.GuardReports"
         android:label="fragment_guard_reports"
         tools:layout="@layout/fragment_guard_reports" />
     <fragment
         android:id="@+id/aulas"
-        android:name="com.example.uniactivos.Aulas"
+        android:name="com.example.uniactivos.fragments.Aulas"
         android:label="fragment_aulas"
         tools:layout="@layout/fragment_aulas" >
         <action
@@ -98,7 +98,7 @@
     </fragment>
     <fragment
         android:id="@+id/pendingAssets"
-        android:name="com.example.uniactivos.PendingAssets"
+        android:name="com.example.uniactivos.fragments.PendingAssets"
         android:label="fragment_pending_assets"
         tools:layout="@layout/fragment_pending_assets" >
         <action
@@ -107,7 +107,7 @@
     </fragment>
     <fragment
         android:id="@+id/classroomViewFragment"
-        android:name="com.example.uniactivos.ClassroomViewFragment"
+        android:name="com.example.uniactivos.fragments.ClassroomViewFragment"
         android:label="fragment_classroom_view"
         tools:layout="@layout/fragment_classroom_view" >
         <action
@@ -116,7 +116,7 @@
     </fragment>
     <fragment
         android:id="@+id/reports"
-        android:name="com.example.uniactivos.Reports"
+        android:name="com.example.uniactivos.fragments.Reports"
         android:label="fragment_reports"
         tools:layout="@layout/fragment_reports" >
         <action
@@ -125,7 +125,7 @@
     </fragment>
     <fragment
         android:id="@+id/receiveStatics"
-        android:name="com.example.uniactivos.ReceiveStatics"
+        android:name="com.example.uniactivos.fragments.ReceiveStatics"
         android:label="fragment_receive_dynamics"
         tools:layout="@layout/fragment_receive_dynamics" >
         <action
@@ -134,7 +134,7 @@
     </fragment>
     <fragment
         android:id="@+id/receiveDynamics"
-        android:name="com.example.uniactivos.ReceiveDynamics"
+        android:name="com.example.uniactivos.fragments.ReceiveDynamics"
         android:label="ReceiveDynamics" >
         <action
             android:id="@+id/action_receiveDynamics_to_pendingAssets"
@@ -142,7 +142,7 @@
     </fragment>
     <fragment
         android:id="@+id/passwordChange"
-        android:name="com.example.uniactivos.PasswordChange"
+        android:name="com.example.uniactivos.fragments.PasswordChange"
         android:label="fragment_password_change"
         tools:layout="@layout/fragment_password_change" >
         <action
