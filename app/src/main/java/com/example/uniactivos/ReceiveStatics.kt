@@ -1,24 +1,28 @@
 package com.example.uniactivos
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TableLayout
-import android.widget.TableRow
-import android.widget.TextView
-import androidx.navigation.fragment.findNavController
+import androidx.fragment.app.Fragment
+import com.example.uniactivos.databinding.FragmentReceiveStaticsBinding
 
-
-class ReceiveStatics : Fragment(R.layout.fragment_receive_statics) {
+class ReceiveStatics : Fragment(){
+    private var _binding: FragmentReceiveStaticsBinding? = null
+    private val binding get() = _binding!!
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentReceiveStaticsBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
+    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        var btnAceptar = view.findViewById<View>(R.id.buttonAceptarActivos)
-
-        btnAceptar.setOnClickListener {
-            findNavController().navigate(R.id.action_receiveStatics_to_receiveDynamics)
-        }
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

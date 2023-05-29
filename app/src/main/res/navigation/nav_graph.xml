@@ -3,90 +3,53 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainMenu">
-    <action
-        android:id="@+id/action_mainMenu_to_mySchedule"
-        app:destination="@id/mySchedule" />
-    <action
-        android:id="@+id/action_mainMenu_to_teacherDynamicForm"
-        app:destination="@id/teacherDynamicForm" />
-    <action
-        android:id="@+id/action_teacherStaticForm_to_mainMenu"
-        app:destination="@id/mainMenu" />
+    app:startDestination="@id/loginFragment">
+
     <fragment
-        android:id="@+id/mainMenu"
+        android:id="@+id/loginFragment"
+        android:name="com.example.uniactivos.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_mainMenu2"
+            app:destination="@id/mainMenu2" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPassword"
+            app:destination="@id/forgotPassword" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainMenu2"
         android:name="com.example.uniactivos.MainMenu"
         android:label="fragment_main_menu"
         tools:layout="@layout/fragment_main_menu" >
         <action
-            android:id="@+id/action_mainMenu_to_mySchedule"
-            app:destination="@id/mySchedule" />
+            android:id="@+id/action_mainMenu2_to_reports"
+            app:destination="@id/reports" />
         <action
-            android:id="@+id/action_mainMenu_to_guardReports"
-            app:destination="@id/guardReports" />
-        <action
-            android:id="@+id/action_mainMenu_to_aulas"
+            android:id="@+id/action_mainMenu2_to_aulas"
             app:destination="@id/aulas" />
         <action
-            android:id="@+id/action_mainMenu_to_pendingAssets"
-            app:destination="@id/pendingAssets" />
-        <action
-            android:id="@+id/action_mainMenu_to_reports"
-            app:destination="@id/reports" />
+            android:id="@+id/action_mainMenu2_to_aulas2"
+            app:destination="@id/aulas" />
     </fragment>
     <fragment
-        android:id="@+id/mySchedule"
-        android:name="com.example.uniactivos.MySchedule"
-        android:label="fragment_my_schedule"
-        tools:layout="@layout/fragment_my_schedule" >
+        android:id="@+id/forgotPassword"
+        android:name="com.example.uniactivos.ForgotPassword"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" >
         <action
-            android:id="@+id/action_mySchedule_to_teacherDynamicForm"
-            app:destination="@id/teacherDynamicForm" />
-        <action
-            android:id="@+id/action_mainMenu_to_teacherDynamicForm"
-            app:destination="@id/teacherDynamicForm" />
+            android:id="@+id/action_forgotPassword_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
-        android:id="@+id/teacherDynamicForm"
-        android:name="com.example.uniactivos.TeacherDynamicForm"
-        android:label="fragment_teacher_dynamic_form"
-        tools:layout="@layout/fragment_teacher_dynamic_form" >
+        android:id="@+id/reports"
+        android:name="com.example.uniactivos.Reports"
+        android:label="fragment_reports"
+        tools:layout="@layout/fragment_reports" >
         <action
-            android:id="@+id/action_teacherDynamicForm_to_teacherStaticForm"
-            app:destination="@id/teacherStaticForm" />
+            android:id="@+id/action_reports_to_mainMenu2"
+            app:destination="@id/mainMenu2" />
     </fragment>
-    <fragment
-        android:id="@+id/teacherStaticForm"
-        android:name="com.example.uniactivos.TeacherStaticForm"
-        android:label="fragment_teacher_static_form"
-        tools:layout="@layout/fragment_teacher_static_form" >
-        <action
-            android:id="@+id/action_teacherStaticForm_to_mainMenu"
-            app:destination="@id/mainMenu" />
-    </fragment>
-    <fragment
-        android:id="@+id/profile2"
-        android:name="com.example.uniactivos.Profile"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" >
-        <action
-            android:id="@+id/action_profile2_to_passwordChange"
-            app:destination="@id/passwordChange" />
-    </fragment>
-    <fragment
-        android:id="@+id/loginFragment2"
-        android:name="com.example.uniactivos.LoginFragment"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" >
-        <action
-            android:id="@+id/action_loginFragment2_to_mainMenu"
-            app:destination="@id/mainMenu" />
-    </fragment>
-    <fragment
-        android:id="@+id/guardReports"
-        android:name="com.example.uniactivos.GuardReports"
-        android:label="fragment_guard_reports"
-        tools:layout="@layout/fragment_guard_reports" />
     <fragment
         android:id="@+id/aulas"
         android:name="com.example.uniactivos.Aulas"
@@ -97,56 +60,12 @@
             app:destination="@id/classroomViewFragment" />
     </fragment>
     <fragment
-        android:id="@+id/pendingAssets"
-        android:name="com.example.uniactivos.PendingAssets"
-        android:label="fragment_pending_assets"
-        tools:layout="@layout/fragment_pending_assets" >
-        <action
-            android:id="@+id/action_pendingAssets_to_receiveStatics"
-            app:destination="@id/receiveStatics" />
-    </fragment>
-    <fragment
         android:id="@+id/classroomViewFragment"
         android:name="com.example.uniactivos.ClassroomViewFragment"
         android:label="fragment_classroom_view"
         tools:layout="@layout/fragment_classroom_view" >
         <action
-            android:id="@+id/action_classroomViewFragment_to_mainMenu"
-            app:destination="@id/mainMenu" />
-    </fragment>
-    <fragment
-        android:id="@+id/reports"
-        android:name="com.example.uniactivos.Reports"
-        android:label="fragment_reports"
-        tools:layout="@layout/fragment_reports" >
-        <action
-            android:id="@+id/action_reports_to_mainMenu"
-            app:destination="@id/mainMenu" />
-    </fragment>
-    <fragment
-        android:id="@+id/receiveStatics"
-        android:name="com.example.uniactivos.ReceiveStatics"
-        android:label="fragment_receive_dynamics"
-        tools:layout="@layout/fragment_receive_dynamics" >
-        <action
-            android:id="@+id/action_receiveStatics_to_receiveDynamics"
-            app:destination="@id/receiveDynamics" />
-    </fragment>
-    <fragment
-        android:id="@+id/receiveDynamics"
-        android:name="com.example.uniactivos.ReceiveDynamics"
-        android:label="ReceiveDynamics" >
-        <action
-            android:id="@+id/action_receiveDynamics_to_pendingAssets"
-            app:destination="@id/mainMenu" />
-    </fragment>
-    <fragment
-        android:id="@+id/passwordChange"
-        android:name="com.example.uniactivos.PasswordChange"
-        android:label="fragment_password_change"
-        tools:layout="@layout/fragment_password_change" >
-        <action
-            android:id="@+id/action_passwordChange_to_profile2"
-            app:destination="@id/profile2" />
+            android:id="@+id/action_classroomViewFragment_to_mainMenu2"
+            app:destination="@id/mainMenu2" />
     </fragment>
 </navigation>

@@ -1,34 +1,28 @@
 package com.example.uniactivos
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
+import androidx.fragment.app.Fragment
+import com.example.uniactivos.databinding.FragmentMyScheduleBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [MySchedule.newInstance] factory method to
- * create an instance of this fragment.
- */
-class MySchedule : Fragment(R.layout.fragment_my_schedule) {
-
+class MySchedule : Fragment(){
+    private var _binding: FragmentMyScheduleBinding? = null
+    private val binding get() = _binding!!
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentMyScheduleBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
+    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        var btncheck = view.findViewById<View>(R.id.btn_check)
-
-        btncheck.setOnClickListener{
-            findNavController().navigate(R.id.action_mySchedule_to_teacherDynamicForm)
-        }
-
-
     }
-
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }

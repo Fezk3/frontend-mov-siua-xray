@@ -1,52 +1,39 @@
 package com.example.uniactivos
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.uniactivos.databinding.FragmentMainMenuBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [MainMenu.newInstance] factory method to
- * create an instance of this fragment.
- */
-class MainMenu : Fragment(R.layout.fragment_main_menu) {
+class MainMenu : Fragment(){
+    private var _binding: FragmentMainMenuBinding? = null
+    private val binding get() = _binding!!
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentMainMenuBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
+    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var btnAula = view.findViewById<View>(R.id.cardViewAula)
-        var btnActivosProfesor = view.findViewById<View>(R.id.cardViewReciboProfesor)
-        var btnReciboGuardas = view.findViewById<View>(R.id.cardreciboGuardas)
-        var btnListaGuardas = view.findViewById<View>(R.id.cardViewReportesGuardas)
-        var btnListaAulas = view.findViewById<View>(R.id.cardViewListaAulas)
-        var btnReportesPending = view.findViewById<View>(R.id.cardViewReportesGuardasPending)
-
-
-        btnAula.setOnClickListener{
-            findNavController().navigate(R.id.action_mainMenu_to_aulas)
+        binding.cardViewReportesGuardasPending.setOnClickListener{
+            findNavController().navigate(R.id.action_mainMenu2_to_reports)
         }
-
-        btnActivosProfesor.setOnClickListener{
-            findNavController().navigate(R.id.action_mainMenu_to_mySchedule)
+        binding.cardViewAula.setOnClickListener{
+            findNavController().navigate(R.id.action_mainMenu2_to_aulas)
         }
-        btnListaGuardas.setOnClickListener{
-            findNavController().navigate(R.id. action_mainMenu_to_guardReports)
+        binding.cardViewListaAulas.setOnClickListener{
+            findNavController().navigate(R.id.action_mainMenu2_to_aulas)
         }
-        btnListaAulas.setOnClickListener{
-            findNavController().navigate(R.id.action_mainMenu_to_aulas)
-        }
-        btnReciboGuardas.setOnClickListener{
-            findNavController().navigate(R.id.action_mainMenu_to_pendingAssets)
-        }
-        btnReportesPending.setOnClickListener{
-            findNavController().navigate(R.id.action_mainMenu_to_reports)
-        }
-
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

@@ -1,30 +1,33 @@
 package com.example.uniactivos
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.uniactivos.databinding.FragmentClassroomViewBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ClassroomViewFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class ClassroomViewFragment : Fragment(R.layout.fragment_classroom_view) {
+class ClassroomViewFragment : Fragment(){
+    private var _binding: FragmentClassroomViewBinding? = null
+    private val binding get() = _binding!!
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentClassroomViewBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
+    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var btnVolver = view.findViewById<View>(R.id.button6)
-
-        btnVolver.setOnClickListener {
-            findNavController().navigate(R.id.action_classroomViewFragment_to_mainMenu)
+        binding.button6.setOnClickListener{
+            findNavController().navigate(R.id.action_classroomViewFragment_to_mainMenu2)
         }
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

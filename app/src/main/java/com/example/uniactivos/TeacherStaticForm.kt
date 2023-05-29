@@ -1,34 +1,28 @@
 package com.example.uniactivos
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TableLayout
-import android.widget.TableRow
-import androidx.navigation.fragment.findNavController
+import androidx.fragment.app.Fragment
+import com.example.uniactivos.databinding.FragmentTeacherStaticFormBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [TeacherStaticForm.newInstance] factory method to
- * create an instance of this fragment.
- */
-class TeacherStaticForm : Fragment(R.layout.fragment_teacher_static_form) {
-
+class TeacherStaticForm : Fragment(){
+    private var _binding: FragmentTeacherStaticFormBinding? = null
+    private val binding get() = _binding!!
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentTeacherStaticFormBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
+    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        var btnAceptar = view.findViewById<View>(R.id.button3)
-
-        btnAceptar.setOnClickListener{
-            findNavController().navigate(R.id.action_teacherStaticForm_to_mainMenu)
-        }
     }
-
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }
