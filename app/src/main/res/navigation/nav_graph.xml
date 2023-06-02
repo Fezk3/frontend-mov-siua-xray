@@ -3,52 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/homeProfe">
+
 
     <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.example.uniactivos.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        android:id="@+id/homeProfe"
+        android:name="com.example.uniactivos.HomeProfe"
+        android:label="fragment_home_profe"
+        tools:layout="@layout/fragment_home_profe" >
         <action
-            android:id="@+id/action_loginFragment_to_mainMenu2"
-            app:destination="@id/mainMenu2" />
-        <action
-            android:id="@+id/action_loginFragment_to_forgotPassword"
-            app:destination="@id/forgotPassword" />
-    </fragment>
-    <fragment
-        android:id="@+id/mainMenu2"
-        android:name="com.example.uniactivos.MainMenu"
-        android:label="fragment_main_menu"
-        tools:layout="@layout/fragment_main_menu" >
-        <action
-            android:id="@+id/action_mainMenu2_to_reports"
-            app:destination="@id/reports" />
-        <action
-            android:id="@+id/action_mainMenu2_to_aulas"
+            android:id="@+id/action_homeProfe_to_aulas"
             app:destination="@id/aulas" />
         <action
-            android:id="@+id/action_mainMenu2_to_aulas2"
-            app:destination="@id/aulas" />
+            android:id="@+id/action_homeProfe_to_teacherDynamicForm"
+            app:destination="@id/teacherDynamicForm" />
     </fragment>
     <fragment
-        android:id="@+id/forgotPassword"
-        android:name="com.example.uniactivos.ForgotPassword"
-        android:label="fragment_forgot_password"
-        tools:layout="@layout/fragment_forgot_password" >
+        android:id="@+id/classroomViewFragment"
+        android:name="com.example.uniactivos.ClassroomViewFragment"
+        android:label="fragment_classroom_view"
+        tools:layout="@layout/fragment_classroom_view" >
         <action
-            android:id="@+id/action_forgotPassword_to_loginFragment"
-            app:destination="@id/loginFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/reports"
-        android:name="com.example.uniactivos.Reports"
-        android:label="fragment_reports"
-        tools:layout="@layout/fragment_reports" >
-        <action
-            android:id="@+id/action_reports_to_mainMenu2"
-            app:destination="@id/mainMenu2" />
+            android:id="@+id/action_classroomViewFragment_to_homeProfe"
+            app:destination="@id/homeProfe" />
     </fragment>
     <fragment
         android:id="@+id/aulas"
@@ -60,12 +37,22 @@
             app:destination="@id/classroomViewFragment" />
     </fragment>
     <fragment
-        android:id="@+id/classroomViewFragment"
-        android:name="com.example.uniactivos.ClassroomViewFragment"
-        android:label="fragment_classroom_view"
-        tools:layout="@layout/fragment_classroom_view" >
+        android:id="@+id/teacherDynamicForm"
+        android:name="com.example.uniactivos.TeacherDynamicForm"
+        android:label="fragment_teacher_dynamic_form"
+        tools:layout="@layout/fragment_teacher_dynamic_form" >
         <action
-            android:id="@+id/action_classroomViewFragment_to_mainMenu2"
-            app:destination="@id/mainMenu2" />
+            android:id="@+id/action_teacherDynamicForm_to_teacherStaticForm"
+            app:destination="@id/teacherStaticForm" />
     </fragment>
+    <fragment
+        android:id="@+id/teacherStaticForm"
+        android:name="com.example.uniactivos.TeacherStaticForm"
+        android:label="fragment_teacher_static_form"
+        tools:layout="@layout/fragment_teacher_static_form" >
+        <action
+            android:id="@+id/action_teacherStaticForm_to_homeProfe"
+            app:destination="@id/homeProfe" />
+    </fragment>
+
 </navigation>

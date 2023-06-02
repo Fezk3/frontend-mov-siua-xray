@@ -23,7 +23,7 @@ class ClassroomViewFragment : Fragment(){
         super.onViewCreated(view, savedInstanceState)
 
         binding.button6.setOnClickListener{
-            findNavController().navigate(R.id.action_classroomViewFragment_to_mainMenu2)
+            findNavController().navigate(R.id.action_classroomViewFragment_to_homeProfe)
         }
     }
     override fun onDestroyView() {

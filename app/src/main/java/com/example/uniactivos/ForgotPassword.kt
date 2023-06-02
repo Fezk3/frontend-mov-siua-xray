@@ -22,9 +22,6 @@ class ForgotPassword : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnSendEmail.setOnClickListener{
-            findNavController().navigate(R.id.action_forgotPassword_to_loginFragment)
-        }
     }
     override fun onDestroyView() {
         super.onDestroyView()

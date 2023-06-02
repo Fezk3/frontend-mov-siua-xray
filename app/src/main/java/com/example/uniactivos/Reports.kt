@@ -21,10 +21,6 @@ class Reports : Fragment(){
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        binding.button2.setOnClickListener{
-            findNavController().navigate(R.id.action_reports_to_mainMenu2)
-        }
     }
     override fun onDestroyView() {
         super.onDestroyView()

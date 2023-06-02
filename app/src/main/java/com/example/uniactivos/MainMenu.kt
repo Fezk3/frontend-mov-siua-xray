@@ -22,15 +22,6 @@ class MainMenu : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.cardViewReportesGuardasPending.setOnClickListener{
-            findNavController().navigate(R.id.action_mainMenu2_to_reports)
-        }
-        binding.cardViewAula.setOnClickListener{
-            findNavController().navigate(R.id.action_mainMenu2_to_aulas)
-        }
-        binding.cardViewListaAulas.setOnClickListener{
-            findNavController().navigate(R.id.action_mainMenu2_to_aulas)
-        }
     }
     override fun onDestroyView() {
         super.onDestroyView()
