@@ -21,6 +21,10 @@ class Reports : Fragment(){
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.button2.setOnClickListener{
+            findNavController().navigate(R.id.action_reports_to_homeGuarda)
+        }
     }
     override fun onDestroyView() {
         super.onDestroyView()

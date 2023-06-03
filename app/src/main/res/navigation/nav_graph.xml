@@ -15,8 +15,8 @@
             android:id="@+id/action_homeProfe_to_aulas"
             app:destination="@id/aulas" />
         <action
-            android:id="@+id/action_homeProfe_to_teacherDynamicForm"
-            app:destination="@id/teacherDynamicForm" />
+            android:id="@+id/action_homeProfe_to_mySchedule2"
+            app:destination="@id/mySchedule2" />
     </fragment>
     <fragment
         android:id="@+id/classroomViewFragment"
@@ -53,6 +53,15 @@
         <action
             android:id="@+id/action_teacherStaticForm_to_homeProfe"
             app:destination="@id/homeProfe" />
+    </fragment>
+    <fragment
+        android:id="@+id/mySchedule2"
+        android:name="com.example.uniactivos.MySchedule"
+        android:label="fragment_my_schedule"
+        tools:layout="@layout/fragment_my_schedule" >
+        <action
+            android:id="@+id/action_mySchedule2_to_teacherDynamicForm"
+            app:destination="@id/teacherDynamicForm" />
     </fragment>
 
 </navigation>

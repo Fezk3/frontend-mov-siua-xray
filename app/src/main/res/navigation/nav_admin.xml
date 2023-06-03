@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_admin"
+    app:startDestination="@id/homeAdmin">
+
+    <fragment
+        android:id="@+id/homeAdmin"
+        android:name="com.example.uniactivos.HomeAdmin"
+        android:label="fragment_home_admin"
+        tools:layout="@layout/fragment_home_admin" />
+</navigation>
