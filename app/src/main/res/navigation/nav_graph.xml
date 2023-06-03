@@ -38,7 +38,7 @@
     </fragment>
     <fragment
         android:id="@+id/teacherDynamicForm"
-        android:name="com.example.uniactivos.TeacherDynamicForm"
+        android:name="com.example.uniactivos.fragments.TeacherDynamicForm"
         android:label="fragment_teacher_dynamic_form"
         tools:layout="@layout/fragment_teacher_dynamic_form" >
         <action
@@ -47,7 +47,7 @@
     </fragment>
     <fragment
         android:id="@+id/teacherStaticForm"
-        android:name="com.example.uniactivos.TeacherStaticForm"
+        android:name="com.example.uniactivos.fragments.TeacherStaticForm"
         android:label="fragment_teacher_static_form"
         tools:layout="@layout/fragment_teacher_static_form" >
         <action

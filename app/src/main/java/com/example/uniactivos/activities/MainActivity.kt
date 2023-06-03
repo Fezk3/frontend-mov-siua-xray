@@ -1,4 +1,4 @@
-package com.example.uniactivos
+package com.example.uniactivos.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
