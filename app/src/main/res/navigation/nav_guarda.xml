@@ -51,4 +51,13 @@
             android:id="@+id/action_reports_to_homeGuarda"
             app:destination="@id/homeGuarda" />
     </fragment>
+    <fragment
+        android:id="@+id/profile2"
+        android:name="com.example.uniactivos.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <activity
+        android:id="@+id/mainActivityxd"
+        android:name="com.example.uniactivos.MainActivity"
+        android:label="MainActivity" />
 </navigation>

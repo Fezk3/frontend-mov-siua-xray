@@ -63,5 +63,10 @@
             android:id="@+id/action_mySchedule2_to_teacherDynamicForm"
             app:destination="@id/teacherDynamicForm" />
     </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.uniactivos.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 
 </navigation>
