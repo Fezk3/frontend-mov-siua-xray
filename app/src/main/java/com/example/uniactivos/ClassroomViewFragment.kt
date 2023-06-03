@@ -1,4 +1,4 @@
-package com.example.uniactivos.fragments
+package com.example.uniactivos
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,24 +6,24 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.uniactivos.databinding.FragmentTeacherStaticFormBinding
+import com.example.uniactivos.databinding.FragmentClassroomViewBinding
 
-class TeacherStaticForm : Fragment(){
-    private var _binding: FragmentTeacherStaticFormBinding? = null
+class ClassroomViewFragment : Fragment(){
+    private var _binding: FragmentClassroomViewBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentTeacherStaticFormBinding.inflate(inflater, container, false)
+        _binding = FragmentClassroomViewBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.button3.setOnClickListener{
-            findNavController().navigate(R.id.action_teacherStaticForm_to_homeProfe)
+        binding.button6.setOnClickListener{
+            findNavController().navigate(R.id.action_classroomViewFragment_to_homeProfe)
         }
     }
     override fun onDestroyView() {

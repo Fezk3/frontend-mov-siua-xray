@@ -1,20 +1,20 @@
-package com.example.uniactivos.fragments
+package com.example.uniactivos
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.uniactivos.databinding.FragmentProfileBinding
+import com.example.uniactivos.databinding.FragmentPasswordChangeBinding
 
-class Profile : Fragment(){
-    private var _binding: FragmentProfileBinding? = null
+class PasswordChange : Fragment(){
+    private var _binding: FragmentPasswordChangeBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentProfileBinding.inflate(inflater, container, false)
+        _binding = FragmentPasswordChangeBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }

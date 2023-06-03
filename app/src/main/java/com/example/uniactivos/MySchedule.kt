@@ -1,4 +1,4 @@
-package com.example.uniactivos.fragments
+package com.example.uniactivos
 
 import android.os.Bundle
 import android.view.LayoutInflater
