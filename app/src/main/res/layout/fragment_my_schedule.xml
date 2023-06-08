@@ -6,7 +6,7 @@
     android:visibility="visible"
     tools:visibility="visible"
     android:orientation="vertical"
-    tools:context=".MySchedule">
+    tools:context=".fragments.MySchedule">
 
     <TextView
         android:id="@+id/title_my_schedule"

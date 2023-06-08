@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/receiveStatics2"
-        android:name="com.example.uniactivos.ReceiveStatics"
+        android:name="com.example.uniactivos.fragments.ReceiveStatics"
         android:label="fragment_receive_statics"
         tools:layout="@layout/fragment_receive_statics" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/receiveDynamics3"
-        android:name="com.example.uniactivos.ReceiveDynamics"
+        android:name="com.example.uniactivos.fragments.ReceiveDynamics"
         android:label="ReceiveDynamics" >
         <action
             android:id="@+id/action_receiveDynamics3_to_receiveStatics2"
@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/pendingAssets"
-        android:name="com.example.uniactivos.PendingAssets"
+        android:name="com.example.uniactivos.fragments.PendingAssets"
         android:label="fragment_pending_assets"
         tools:layout="@layout/fragment_pending_assets" >
         <action
@@ -33,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/homeGuarda"
-        android:name="com.example.uniactivos.HomeGuarda"
+        android:name="com.example.uniactivos.fragments.HomeGuarda"
         android:label="HomeGuarda" >
         <action
             android:id="@+id/action_homeGuarda_to_pendingAssets"
@@ -44,7 +44,7 @@
     </fragment>
     <fragment
         android:id="@+id/reports"
-        android:name="com.example.uniactivos.Reports"
+        android:name="com.example.uniactivos.fragments.Reports"
         android:label="fragment_reports"
         tools:layout="@layout/fragment_reports" >
         <action
@@ -53,7 +53,7 @@
     </fragment>
     <fragment
         android:id="@+id/profile2"
-        android:name="com.example.uniactivos.Profile"
+        android:name="com.example.uniactivos.fragments.Profile"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <activity

@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:visibility="visible"
     tools:visibility="visible"
-    tools:context=".PendingAssets">
+    tools:context=".fragments.PendingAssets">
 
     <TextView
         android:id="@+id/title_pending_assets"
