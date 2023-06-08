@@ -58,6 +58,6 @@
         tools:layout="@layout/fragment_profile" />
     <activity
         android:id="@+id/mainActivityxd"
-        android:name="com.example.uniactivos.MainActivity"
+        android:name="com.example.uniactivos.activities.MainActivity"
         android:label="MainActivity" />
 </navigation>
