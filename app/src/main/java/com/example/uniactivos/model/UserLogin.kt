@@ -28,3 +28,7 @@ data class PrivilegeDetails(
     var id: Long? = null,
     var name: String? = null,
 )
+data class PriorityDetails(
+    var id: Long? = null,
+    var label: String? = null,
+)
