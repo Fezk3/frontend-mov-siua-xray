@@ -1,6 +1,6 @@
 package com.example.uniactivos.model
 
-data class CollegeDetails(
+data class College(
     var id: Long? = null,
     var name: String? = null,
 )
