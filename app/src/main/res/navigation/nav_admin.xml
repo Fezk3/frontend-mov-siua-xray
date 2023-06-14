@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeAdmin"
-        android:name="com.example.uniactivos.fragments.HomeAdmin"
+        android:name="com.example.uniactivos.view.fragments.HomeAdmin"
         android:label="fragment_home_admin"
         tools:layout="@layout/fragment_home_admin" />
 </navigation>

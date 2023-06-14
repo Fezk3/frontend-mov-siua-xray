@@ -1,4 +1,4 @@
-package com.example.uniactivos.activities
+package com.example.uniactivos.view
 
 import android.content.Intent
 import android.os.Bundle

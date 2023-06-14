@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/homeProfe"
-        android:name="com.example.uniactivos.fragments.HomeProfe"
+        android:name="com.example.uniactivos.view.fragments.HomeProfe"
         android:label="fragment_home_profe"
         tools:layout="@layout/fragment_home_profe" >
         <action
@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/classroomViewFragment"
-        android:name="com.example.uniactivos.fragments.ClassroomViewFragment"
+        android:name="com.example.uniactivos.view.fragments.ClassroomViewFragment"
         android:label="fragment_classroom_view"
         tools:layout="@layout/fragment_classroom_view" >
         <action
@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/aulas"
-        android:name="com.example.uniactivos.fragments.Aulas"
+        android:name="com.example.uniactivos.view.fragments.Aulas"
         android:label="fragment_aulas"
         tools:layout="@layout/fragment_aulas" >
         <action
@@ -38,7 +38,7 @@
     </fragment>
     <fragment
         android:id="@+id/teacherDynamicForm"
-        android:name="com.example.uniactivos.fragments.TeacherDynamicForm"
+        android:name="com.example.uniactivos.view.fragments.TeacherDynamicForm"
         android:label="fragment_teacher_dynamic_form"
         tools:layout="@layout/fragment_teacher_dynamic_form" >
         <action
@@ -47,7 +47,7 @@
     </fragment>
     <fragment
         android:id="@+id/teacherStaticForm"
-        android:name="com.example.uniactivos.fragments.TeacherStaticForm"
+        android:name="com.example.uniactivos.view.fragments.TeacherStaticForm"
         android:label="fragment_teacher_static_form"
         tools:layout="@layout/fragment_teacher_static_form" >
         <action
@@ -56,7 +56,7 @@
     </fragment>
     <fragment
         android:id="@+id/mySchedule2"
-        android:name="com.example.uniactivos.fragments.MySchedule"
+        android:name="com.example.uniactivos.view.fragments.MySchedule"
         android:label="fragment_my_schedule"
         tools:layout="@layout/fragment_my_schedule" >
         <action
@@ -65,7 +65,7 @@
     </fragment>
     <fragment
         android:id="@+id/profile"
-        android:name="com.example.uniactivos.fragments.Profile"
+        android:name="com.example.uniactivos.view.fragments.Profile"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
 

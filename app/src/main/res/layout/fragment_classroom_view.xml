@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.ClassroomViewFragment">
+    tools:context=".view.fragments.ClassroomViewFragment">
 
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="visible"
-        tools:context=".fragments.TeacherStaticForm"
+        tools:context=".view.fragments.TeacherStaticForm"
         tools:visibility="visible">
         
 

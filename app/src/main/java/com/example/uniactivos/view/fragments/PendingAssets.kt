@@ -1,25 +1,31 @@
-package com.example.uniactivos.fragments
+package com.example.uniactivos.view.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.uniactivos.databinding.FragmentPasswordChangeBinding
+import androidx.navigation.fragment.findNavController
+import com.example.uniactivos.R
+import com.example.uniactivos.databinding.FragmentPendingAssetsBinding
 
-class PasswordChange : Fragment(){
-    private var _binding: FragmentPasswordChangeBinding? = null
+class PendingAssets : Fragment(){
+    private var _binding: FragmentPendingAssetsBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentPasswordChangeBinding.inflate(inflater, container, false)
+        _binding = FragmentPendingAssetsBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.btnAccept.setOnClickListener{
+            findNavController().navigate(R.id.action_pendingAssets_to_receiveDynamics3)
+        }
     }
     override fun onDestroyView() {
         super.onDestroyView()
