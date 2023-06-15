@@ -8,18 +8,18 @@ import com.example.uniactivos.model.providers.FormProvider
 
 class FormViewModel : ViewModel(){
 
-    val ticket =  MutableLiveData<FormDetails>()
-    val ticketList = MutableLiveData<List<FormDetails>>()
+    val FormDetail =  MutableLiveData<FormDetails>()
+    val FormDetailList = MutableLiveData<List<FormDetails>>()
 
     fun getTicket() {
         val position = (0..2).random()
-        val _ticket = FormProvider.findById(position)
-        ticket.postValue(_ticket)
+        val _formDetail = FormProvider.findById(position)
+        FormDetail.postValue(_formDetail)
     }
 
     fun findAllTicket() {
-        val _ticketList = FormProvider.findAllTickets()
-        ticketList.postValue(_ticketList)
+        val _formDetailList = FormProvider.findAllTickets()
+        FormDetailList.postValue(_formDetailList)
     }
 
 }

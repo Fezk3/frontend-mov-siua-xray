@@ -7,14 +7,14 @@ class FormProvider {
 
     companion object {
         fun findById(id: Int): FormDetails {
-            return ticketList[id]
+            return formList[id]
         }
 
         fun findAllTickets(): List<FormDetails> {
-            return ticketList
+            return formList
         }
 
-        val ticketList = listOf<FormDetails>(
+        val formList = listOf<FormDetails>(
             FormDetails(
                 1,
                 null,
