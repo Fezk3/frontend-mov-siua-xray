@@ -10,13 +10,13 @@ class ClassroomViewModel : ViewModel(){
     val classroom =  MutableLiveData<ClassroomDetails>()
     val classroomList = MutableLiveData<List<ClassroomDetails>>()
 
-    fun getTicket() {
+    fun getClassroom() {
         val position = (0..2).random()
         val _classroom = ClassroomProvider.findById(position)
         classroom.postValue(_classroom)
     }
 
-    fun findAllTicket() {
+    fun findAllClassrrom() {
         val _classroomList = ClassroomProvider.findAllTickets()
         classroomList.postValue(_classroomList)
     }
