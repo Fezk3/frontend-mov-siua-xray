@@ -16,7 +16,7 @@ data class FormHistoryDetails(
     var id: Long? = null,
     var form: FormDetails? = null,
     var user: UserDetails? = null,
-    var date: Date? = null,
+    var date: String? = null,
     var state: StatusDetails? = null,
 )
 
