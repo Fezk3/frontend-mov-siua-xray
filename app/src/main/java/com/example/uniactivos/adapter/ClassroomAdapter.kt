@@ -25,6 +25,10 @@ class ClassroomAdapter : RecyclerView.Adapter<MainViewHolder>() {
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
         val classr = classroom[position]
         holder.binding.Numero.text = classr.classNumber.toString()
+        holder.binding.btnViewDetails.setOnClickListener {
+
+
+        }
     }
 
     override fun getItemCount(): Int {
