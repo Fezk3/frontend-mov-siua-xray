@@ -4,7 +4,7 @@ data class ClassroomDetails(
     var id: Long? = null,
     var classNumber: String? = null,
     var college: College? = null,
-    var assetsList: List<AssetsDetails>? = null,
+   // var assetsList: List<AssetsDetails>? = null,
 )
 data class AssetsDetails(
     var id: Long? = null,
