@@ -216,6 +216,11 @@
                 android:textColor="@color/blue"
                 android:textSize="30sp" />
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvStaticAsset"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -227,7 +232,8 @@
                     android:layout_height="wrap_content"
                     android:stretchColumns="*"
                     android:padding="16dp"
-                    tools:ignore="UselessParent,VisualLintBounds">
+                    tools:ignore="UselessParent,VisualLintBounds"
+                    android:visibility="invisible">
 
                     <TableRow android:background="@color/black" >
                         <TextView
