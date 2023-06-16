@@ -10,13 +10,13 @@ class DynamicAssetViewModel : ViewModel(){
     val assetDetail =  MutableLiveData<AssetsDetails>()
     val assetDetailList = MutableLiveData<List<AssetsDetails>>()
 
-    fun getTicket() {
+    fun getDinAsset() {
         val position = (0..2).random()
         val _assetDetail = DynamicAssetProvider.findById(position)
         assetDetail.postValue(_assetDetail)
     }
 
-    fun findAllTicket() {
+    fun findAllDinAssets() {
         val _assetDetailList = DynamicAssetProvider.findAllAssets()
         assetDetailList.postValue(_assetDetailList)
     }
