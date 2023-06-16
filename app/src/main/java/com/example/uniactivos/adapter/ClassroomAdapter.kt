@@ -8,7 +8,7 @@ import com.example.uniactivos.model.ClassroomDetails
 
 class ClassroomAdapter : RecyclerView.Adapter<MainViewHolder>() {
 
-    private var classroom = mutableListOf<ClassroomDetails>()
+    var classroom = mutableListOf<ClassroomDetails>()
 
     fun setClassroomList(classroom: List<ClassroomDetails>) {
         this.classroom = classroom.toMutableList()
