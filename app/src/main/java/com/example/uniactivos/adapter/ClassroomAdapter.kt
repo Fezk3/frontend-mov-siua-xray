@@ -25,7 +25,7 @@ class ClassroomAdapter : RecyclerView.Adapter<MainViewHolder>() {
         return MainViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MainViewHolder, position: Int, model: ClassroomDetails) {
         val classr = classroom[position]
         holder.binding.Numero.text = classr.classNumber.toString()
         holder.binding.btnViewDetails.setOnClickListener {
@@ -43,3 +43,7 @@ class ClassroomAdapter : RecyclerView.Adapter<MainViewHolder>() {
 class MainViewHolder(
     val binding: AulaItemBinding
 ) : RecyclerView.ViewHolder(binding.root)
+
+interface ClassroomItemClickListener {
+    fun onClassroomItemClick(classroom: ClassroomDetails)
+}
