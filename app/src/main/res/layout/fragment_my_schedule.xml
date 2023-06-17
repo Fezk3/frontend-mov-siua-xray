@@ -44,6 +44,11 @@
             android:gravity="center"
             android:orientation="vertical">
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvschedule"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -55,6 +60,7 @@
                     android:layout_height="wrap_content"
                     android:padding="16dp"
                     android:stretchColumns="*"
+                    android:visibility="visible"
                     tools:ignore="UselessParent,VisualLintBounds">
 
                     <TableRow android:background="@color/black">
@@ -184,4 +190,5 @@
             </HorizontalScrollView>
         </LinearLayout>
     </LinearLayout>
+
 </LinearLayout>
