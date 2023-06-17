@@ -3,31 +3,41 @@ package com.example.uniactivos.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.uniactivos.model.AssetsDetails
-import com.example.uniactivos.model.ClassroomDetails
+import com.example.uniactivos.model.Classroom
 import com.example.uniactivos.model.providers.ClassroomProvider
+import com.example.uniactivos.repository.MainRepository
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 
-class ClassroomViewModel : ViewModel(){
+class ClassroomViewModel(private val mainRepository: MainRepository) : ViewModel() {
 
-    val classroom =  MutableLiveData<ClassroomDetails>()
-    val classroomList = MutableLiveData<List<ClassroomDetails>>()
-    val classroomAssets =  MutableLiveData<List<AssetsDetails>?>()
+    val classroom = MutableLiveData<Classroom>()
+    val classroomList = MutableLiveData<List<Classroom>>()
+    val classroomAssets = MutableLiveData<List<AssetsDetails>?>()
+    val errorMessage = MutableLiveData<String>()
+    val loading = MutableLiveData<Boolean>()
+    var job: Job? = null
 
-    fun getClassroom() {
-        val position = (0..2).random()
-        val _classroom = ClassroomProvider.findById(position)
-        classroom.postValue(_classroom)
+    fun getAllClassrooms() {
+        job = CoroutineScope(Dispatchers.IO).launch {
+            loading.postValue(true)
+            val response = mainRepository.getAllClassrooms()
+            withContext(Dispatchers.Main) {
+                if (response.isSuccessful) {
+                    classroomList.postValue(response.body())
+                    loading.value = false
+                }
+            }
+        }
     }
 
     fun getClassroomById(id: Int) {
         val _classroom = ClassroomProvider.findById(id)
         classroom.postValue(_classroom)
     }
-
-    /*fun getAssets() {
-        val position = (0..2).random()
-        val _classroomAssets = ClassroomProvider.findById(position).assetsList
-        classroomAssets.postValue(_classroomAssets)
-    }*/
 
     fun findAllClassrrom() {
         val _classroomList = ClassroomProvider.findAllTickets()

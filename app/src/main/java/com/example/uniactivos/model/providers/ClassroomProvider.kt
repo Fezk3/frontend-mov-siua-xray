@@ -1,21 +1,21 @@
 package com.example.uniactivos.model.providers
 
-import com.example.uniactivos.model.ClassroomDetails
+import com.example.uniactivos.model.Classroom
 import com.example.uniactivos.model.College
 
 class ClassroomProvider {
 
     companion object {
-        fun findById(id: Int): ClassroomDetails {
+        fun findById(id: Int): Classroom {
             return classroomList[id]
         }
 
-        fun findAllTickets(): List<ClassroomDetails> {
+        fun findAllTickets(): List<Classroom> {
             return classroomList
         }
 
-        val classroomList = listOf<ClassroomDetails>(
-            ClassroomDetails(
+        val classroomList = listOf<Classroom>(
+            Classroom(
                 1,
                 "A12",
                 College(
@@ -23,7 +23,7 @@ class ClassroomProvider {
                     "UNA",
                 ),
             ),
-            ClassroomDetails(
+            Classroom(
                 2,
                 "A11",
                 College(
@@ -31,7 +31,7 @@ class ClassroomProvider {
                     "UNA",
                 ),
             ),
-            ClassroomDetails(
+            Classroom(
                 3,
                 "A13",
                 College(
@@ -39,7 +39,7 @@ class ClassroomProvider {
                     "UNA",
                 ),
             ),
-            ClassroomDetails(
+            Classroom(
                 4,
                 "A14",
                 College(
@@ -47,7 +47,7 @@ class ClassroomProvider {
                     "UNA",
                 ),
             ),
-            ClassroomDetails(
+            Classroom(
                 5,
                 "A12",
                 College(

@@ -3,7 +3,7 @@ package com.example.uniactivos.model
 import android.os.Parcel
 import android.os.Parcelable
 
-data class ClassroomDetails(
+data class Classroom(
     var id: Long? = null,
     var classNumber: String? = null,
     var college: College? = null,

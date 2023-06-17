@@ -5,15 +5,15 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uniactivos.databinding.AulaItemBinding
-import com.example.uniactivos.model.ClassroomDetails
+import com.example.uniactivos.model.Classroom
 import com.example.uniactivos.view.fragments.AulasDirections
 
 
 class ClassroomAdapter : RecyclerView.Adapter<MainViewHolder>() {
 
-    var classroom = mutableListOf<ClassroomDetails>()
+    var classroom = mutableListOf<Classroom>()
 
-    fun setClassroomList(classroom: List<ClassroomDetails>) {
+    fun setClassroomList(classroom: List<Classroom>) {
         this.classroom = classroom.toMutableList()
         notifyDataSetChanged()
     }

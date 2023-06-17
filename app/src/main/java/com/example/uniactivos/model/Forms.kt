@@ -4,7 +4,7 @@ import java.util.Date
 
 data class FormDetails(
     var id: Long? = null,
-    var classroom: ClassroomDetails? = null,
+    var classroom: Classroom? = null,
 )
 
 data class StatusDetails(

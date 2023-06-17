@@ -1,6 +1,6 @@
 package com.example.uniactivos.model.providers
 
-import com.example.uniactivos.model.ClassroomDetails
+import com.example.uniactivos.model.Classroom
 import com.example.uniactivos.model.College
 import com.example.uniactivos.model.FormDetails
 import com.example.uniactivos.model.FormHistoryDetails
@@ -24,7 +24,7 @@ class FormHistoryProvider {
                 1,
                 FormDetails(
                     1,
-                    ClassroomDetails(
+                    Classroom(
                         1,
                         "A12",
                         College(
@@ -49,7 +49,7 @@ class FormHistoryProvider {
                 2,
                 FormDetails(
                     1,
-                    ClassroomDetails(
+                    Classroom(
                         1,
                         "A12",
                         College(
