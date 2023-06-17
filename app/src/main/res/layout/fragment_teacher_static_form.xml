@@ -224,7 +224,8 @@
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:ignore="UselessParent">
+                tools:ignore="UselessParent"
+                android:visibility="invisible">
 
                 <TableLayout
                     android:id="@+id/tableLayout_activos"
