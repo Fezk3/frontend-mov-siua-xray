@@ -26,10 +26,12 @@ class ClassroomAdapter : RecyclerView.Adapter<MainViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int, model: ClassroomDetails) {
+        val classr1 = classroom[position].id
         val classr = classroom[position]
         holder.binding.Numero.text = classr.classNumber.toString()
+        // enviar datos al fragment
         holder.binding.btnViewDetails.setOnClickListener {
-            val action = AulasDirections.actionAulasToClassroomViewFragment(classr)
+            val action = AulasDirections.actionAulasToClassroomViewFragment(classr1)
             holder.itemView.findNavController().navigate(action)
         }
     }
