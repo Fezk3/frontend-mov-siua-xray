@@ -42,6 +42,7 @@ data class ClassroomDetails(
 data class AssetsDetails(
     var id: Long? = null,
     var name: String? = null,
+    var cant: Long? = null,
     var assetType: AssetTypeDetails? = null,
 )
 data class AssetTypeDetails(

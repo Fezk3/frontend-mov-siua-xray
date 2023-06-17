@@ -214,6 +214,18 @@
                 android:textColor="@color/blue"
                 android:textSize="30sp" />
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDynamicAsset"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/btn_aceptar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_aceptar"
+                android:textSize="20sp"/>
+
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -225,7 +237,8 @@
                     android:layout_height="wrap_content"
                     android:stretchColumns="*"
                     android:padding="16dp"
-                    tools:ignore="UselessParent,VisualLintBounds">
+                    tools:ignore="UselessParent,VisualLintBounds"
+                    android:visibility="invisible">
 
                     <TableRow android:background="@color/black" >
                         <TextView
@@ -265,21 +278,21 @@
                             android:padding="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"  />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
                     </TableRow>
 
                 </TableLayout>
 
             </HorizontalScrollView>
 
-            <Button
-                android:id="@+id/btn_aceptar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/btn_aceptar"
-                android:textSize="20sp"/>
+
 
         </LinearLayout>
 
     </LinearLayout>
+
 
 </FrameLayout>
