@@ -9,13 +9,13 @@ class StaticAssetViewModel : ViewModel(){
     val assetDetail =  MutableLiveData<AssetsDetails>()
     val assetDetailList = MutableLiveData<List<AssetsDetails>>()
 
-    fun getTicket() {
+    fun getStatAsset() {
         val position = (0..2).random()
         val _assetDetail = StaticAssetProvider.findById(position)
         assetDetail.postValue(_assetDetail)
     }
 
-    fun findAllTicket() {
+    fun findAllStatAssets() {
         val _assetDetailList = StaticAssetProvider.findAllAssets()
         assetDetailList.postValue(_assetDetailList)
     }

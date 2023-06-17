@@ -213,11 +213,17 @@
                 android:textColor="@color/blue"
                 android:textSize="30sp" />
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDynamicAsset"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:ignore="UselessParent">
+                tools:ignore="UselessParent"
+                android:visibility="invisible">
 
                 <TableLayout
                     android:id="@+id/tableLayout_activos"
