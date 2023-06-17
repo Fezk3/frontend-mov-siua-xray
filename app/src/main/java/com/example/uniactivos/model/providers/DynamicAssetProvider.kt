@@ -17,6 +17,7 @@ class DynamicAssetProvider {
             AssetsDetails(
                 1,
                 "xx",
+                3,
                 AssetTypeDetails(
                     1,
                     "Dinámico"
@@ -25,6 +26,7 @@ class DynamicAssetProvider {
             AssetsDetails(
                 1,
                 "aa",
+                4,
                 AssetTypeDetails(
                     1,
                     "Dinámico"
@@ -33,6 +35,7 @@ class DynamicAssetProvider {
             AssetsDetails(
                 1,
                 "bb",
+                5,
                 AssetTypeDetails(
                     1,
                     "Dinámico"
@@ -41,6 +44,7 @@ class DynamicAssetProvider {
             AssetsDetails(
                 1,
                 "cc",
+                2,
                 AssetTypeDetails(
                     1,
                     "Dinámico"
@@ -49,6 +53,7 @@ class DynamicAssetProvider {
             AssetsDetails(
                 1,
                 "dd",
+                3,
                 AssetTypeDetails(
                     1,
                     "Dinámico"
