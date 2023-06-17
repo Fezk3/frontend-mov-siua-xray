@@ -1,5 +1,7 @@
 package com.example.uniactivos.model.providers
 
+import com.example.uniactivos.model.Classroom
+import com.example.uniactivos.model.College
 import com.example.uniactivos.model.ScheduleDetails
 
 class ScheduleProvider {
@@ -10,7 +12,7 @@ class ScheduleProvider {
             return scheduleList[id]
         }
 
-        fun findAllTickets(): List<ScheduleDetails> {
+        fun findAllSchedules(): List<ScheduleDetails> {
             return scheduleList
         }
 
@@ -21,9 +23,15 @@ class ScheduleProvider {
                 "11-11-11",
                 "1pm",
                 "2pm",
-
-
-
+                1,
+                Classroom(
+                    1,
+                    "A",
+                    College(
+                        1,
+                        "Ingenieria",
+                    )
+                )
             ),
             ScheduleDetails(
                 2,
