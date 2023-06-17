@@ -2,9 +2,12 @@ package com.example.uniactivos.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uniactivos.databinding.AulaItemBinding
 import com.example.uniactivos.model.ClassroomDetails
+import com.example.uniactivos.view.fragments.AulasDirections
+
 
 class ClassroomAdapter : RecyclerView.Adapter<MainViewHolder>() {
 
@@ -26,8 +29,8 @@ class ClassroomAdapter : RecyclerView.Adapter<MainViewHolder>() {
         val classr = classroom[position]
         holder.binding.Numero.text = classr.classNumber.toString()
         holder.binding.btnViewDetails.setOnClickListener {
-
-
+            val action = AulasDirections.actionAulasToClassroomViewFragment(classr)
+            holder.itemView.findNavController().navigate(action)
         }
     }
 

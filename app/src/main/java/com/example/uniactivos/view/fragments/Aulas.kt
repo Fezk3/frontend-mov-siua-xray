@@ -36,6 +36,10 @@ class Aulas : Fragment(){
 
         classroomViewModel.findAllClassrrom()
 
+        binding.btnAccept.setOnClickListener {
+            findNavController().navigate(R.id.action_aulas_to_classroomViewFragment)
+        }
+
         return view
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

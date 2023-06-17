@@ -26,6 +26,8 @@
         <action
             android:id="@+id/action_classroomViewFragment_to_homeProfe"
             app:destination="@id/homeProfe" />
+        <argument android:name="classroom"
+            app:argType="reference" />
     </fragment>
     <fragment
         android:id="@+id/aulas"
