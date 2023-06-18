@@ -34,7 +34,7 @@ class LoginViewModel constructor(
                             ?: ""))
                     loading.value = false
                 } else {
-                    _loginResponse.value = LoginResult(error = "Login failed")
+                    _loginResponse.value = LoginResult(error = R.string.login_failed)
                     onError("Error : ${response.message()}")
                 }
             }
