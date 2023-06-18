@@ -6,18 +6,22 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.uniactivos.R
 import com.example.uniactivos.adapter.ClassroomAdapter
 import com.example.uniactivos.databinding.FragmentAulasBinding
+import com.example.uniactivos.repository.MainRepository
+import com.example.uniactivos.service.MainService
 import com.example.uniactivos.viewmodel.ClassroomViewModel
+import com.example.uniactivos.viewmodel.ViewModelFactory
 
 class Aulas : Fragment(){
     private var _binding: FragmentAulasBinding? = null
     private val binding get() = _binding!!
 
-    private val classroomViewModel: ClassroomViewModel by viewModels()
+    private lateinit var classroomViewModel: ClassroomViewModel
     private val adapter: ClassroomAdapter = ClassroomAdapter()
 
     override fun onCreateView(
@@ -30,15 +34,26 @@ class Aulas : Fragment(){
         binding.rvClassrooms.layoutManager = LinearLayoutManager(requireContext())
         binding.rvClassrooms.adapter = adapter
 
+       /* classroomViewModel.classroomList.observe(viewLifecycleOwner) {
+            adapter.setClassroomList(it)
+        }
+
+        classroomViewModel.getAllClassrooms()*/
+
+        val mainService = MainService.getInstance()
+        val mainRepository = MainRepository(mainService)
+
+        classroomViewModel = ViewModelProvider(this, ViewModelFactory(mainRepository)).get(ClassroomViewModel::class.java)
+
         classroomViewModel.classroomList.observe(viewLifecycleOwner) {
             adapter.setClassroomList(it)
         }
 
-        classroomViewModel.findAllClassrrom()
-
         binding.btnAccept.setOnClickListener {
             findNavController().navigate(R.id.action_aulas_to_classroomViewFragment)
         }
+
+        classroomViewModel.getAllClassrooms()
 
         return view
     }

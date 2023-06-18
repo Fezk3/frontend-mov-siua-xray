@@ -29,6 +29,8 @@ class ClassroomViewModel(private val mainRepository: MainRepository) : ViewModel
                 if (response.isSuccessful) {
                     classroomList.postValue(response.body())
                     loading.value = false
+                }else{
+                    onError("Error : ${response.message()}")
                 }
             }
         }
@@ -42,6 +44,16 @@ class ClassroomViewModel(private val mainRepository: MainRepository) : ViewModel
     fun findAllClassrrom() {
         val _classroomList = ClassroomProvider.findAllTickets()
         classroomList.postValue(_classroomList)
+    }
+
+    private fun onError(message: String) {
+        errorMessage.value = message
+        loading.value = false
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        job?.cancel()
     }
 
 }
