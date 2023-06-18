@@ -75,4 +75,6 @@
     <string name="txt_subtitle_change_pass">Cambio de Contraseña</string>
     <string name="txt_professor">Profesor</string>
     <string name="title_activity_login">LoginActivity</string>
+
+
 </resources>
