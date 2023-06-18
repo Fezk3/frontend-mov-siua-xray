@@ -34,7 +34,7 @@ class LoginViewModel constructor(
                             ?: ""))
                     loading.value = false
                 } else {
-                    _loginResponse.value = LoginResult(error = "Login failed")
+                    _loginResponse.value = LoginResult(error = R.string.login_failed)
                     onError("Error : ${response.message()}")
                 }
             }
@@ -47,7 +47,7 @@ class LoginViewModel constructor(
 
     fun loginDataChanged(loginRequest: UserLoginInput) {
         if (!isUserNameValid(loginRequest.email)) {
-            _loginForm.value = LoginFormState(usernameError = R.string.invalid_username)
+            _loginForm.value = LoginFormState(emailError = R.string.invalid_username)
         } else if (!isPasswordValid(loginRequest.password)) {
             _loginForm.value = LoginFormState(passwordError = R.string.invalid_password)
         } else {
