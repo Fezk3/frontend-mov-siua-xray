@@ -49,9 +49,15 @@ class LoginViewModel constructor(
         if (!isUserNameValid(loginRequest.email)) {
             _loginForm.value = LoginFormState(usernameError = R.string.invalid_username)
         } else if (!isPasswordValid(loginRequest.password)) {
-            _loginForm.value = LoginFormState(passwordError = R.string.invalid_password)
+            _loginForm.value = LoginFormState(
+                passwordError = R.string.invalid_password,
+                usernameError = R.string.invalid_username
+            )
         } else {
-            _loginForm.value = LoginFormState(isDataValid = true)
+            _loginForm.value = LoginFormState(
+                isDataValid = true,
+                usernameError = R.string.invalid_username
+            )
         }
     }
 

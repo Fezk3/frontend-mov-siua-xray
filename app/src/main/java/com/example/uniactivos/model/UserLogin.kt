@@ -47,9 +47,11 @@ data class PriorityDetails(
  * Data validation state of the login form.
  */
 data class LoginFormState(
+
     val emailError: Int? = null,
     val passwordError: Int? = null,
-    val isDataValid: Boolean = false
+    val isDataValid: Boolean = false,
+    val usernameError: Int? = null,
 )
 
 /**
