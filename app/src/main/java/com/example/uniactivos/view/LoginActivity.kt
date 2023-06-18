@@ -116,4 +116,45 @@ class LoginActivity : AppCompatActivity() {
         }
 
     }
+    /**
+     * Success login to redirect the app to the next Screen
+     */
+    private fun updateUiWithUser(model: LoggedInUserView) {
+        val welcome = getString(R.string.welcome)
+        val username = model.username
+
+        // Initiate successful logged in experience
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+
+        Toast.makeText(
+            applicationContext,
+            "$welcome $username",
+            Toast.LENGTH_LONG
+        ).show()
+    }
+
+    /**
+     * Unsuccessful login
+     */
+    private fun showLoginFailed(@StringRes errorString: Int) {
+        Toast.makeText(applicationContext, errorString, Toast.LENGTH_SHORT).show()
+    }
+}
+
+/**
+ * Extension function to simplify setting an afterTextChanged action to EditText components.
+ */
+fun EditText.
+
+        afterTextChanged(afterTextChanged: (String) -> Unit) {
+    this.addTextChangedListener(object : TextWatcher {
+        override fun afterTextChanged(editable: Editable?) {
+            afterTextChanged.invoke(editable.toString())
+        }
+
+        override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
+
+        override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
+    })
 }
