@@ -1,5 +1,6 @@
 package com.example.uniactivos.view
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -32,11 +33,13 @@ class LoginActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        val btnLiciniaSession = binding.btnLoginIrMenu
+        /*val btnLiciniaSession = binding.btnLoginIrMenu
         btnLiciniaSession.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-        }
+        }*/
+
+        sessionManager = SessionManager(this)
 
         // LoginViewModelFactory
         loginViewModel =
