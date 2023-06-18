@@ -30,7 +30,7 @@ class LoginViewModel constructor(
             withContext(Dispatchers.Main) {
                 if (response.isSuccessful) {
                     _loginResponse.value =
-                        LoginResult(success = LoggedInUserView(username = response.body()?.email
+                        LoginResult(success = LoggedInUserView(username = response.body()?.username
                             ?: ""))
                     loading.value = false
                 } else {
