@@ -9,10 +9,10 @@ import retrofit2.converter.gson.GsonConverterFactory
 object ServiceBuilder {
     private val client =
         OkHttpClient.Builder().addInterceptor(AuthorizationInterceptor()).build()
-    private val Base_URL = "https://uniactivosxray-app-v01.herokuapp.com"
+    private val Base_url = "\"https://uniactivosxray-app-v01.herokuapp.com/\""
 
     private val retrofit = Retrofit.Builder()
-        .baseUrl(Base_URL)
+        .baseUrl(BuildConfig.BASE_URL) //.baseUrl(Base_url)
         .addConverterFactory(GsonConverterFactory.create())
         .client(client)
         .build()
