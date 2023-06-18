@@ -27,15 +27,15 @@ class LoginRepository constructor (
         sessionManager?.deleteAuthToken()
     }
 
-    suspend fun login(userLogin: UserLoginInput)  : Response<UserDetails> {
-        val response = loginService.login(userLogin)
-
-        if (response.isSuccessful) {
-            setLoggedInUser(response.body(), response.headers()["Authorization"].toString())
-        }
-
-        return response
-    }
+//    suspend fun login(userLogin: UserLoginInput)  : Response<UserDetails> {
+//        val response = loginService.login(userLogin)
+//
+//        if (response.isSuccessful) {
+//            setLoggedInUser(response.body(), response.headers()["Authorization"].toString())
+//        }
+//
+//        return response
+//    }
 
     private fun setLoggedInUser(loginRequest: UserDetails?, token:String) {
         this.user = loginRequest
