@@ -33,11 +33,13 @@ class LoginActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        val btnLiciniaSession = binding.btnLoginIrMenu
+        /*val btnLiciniaSession = binding.btnLoginIrMenu
         btnLiciniaSession.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-        }
+        }*/
+
+        sessionManager = SessionManager(this)
 
         // LoginViewModelFactory
         loginViewModel =
