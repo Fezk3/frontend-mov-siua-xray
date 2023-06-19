@@ -41,6 +41,7 @@ class LoginRepository constructor (
     private fun setLoggedInUser(loginRequest: UserLoginResponse?, token:String) {
         this.user = loginRequest
         sessionManager?.saveAuthToken(token)
+        println(token)
 
         // If user credentials will be cached in local storage, it is recommended it be encrypted
         // @see https://developer.android.com/training/articles/keystore
