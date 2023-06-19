@@ -11,13 +11,13 @@ class FormViewModel : ViewModel(){
     val formDetail =  MutableLiveData<FormDetails>()
     val formDetailList = MutableLiveData<List<FormDetails>>()
 
-    fun getTicket() {
+    fun getform() {
         val position = (0..2).random()
         val _formDetail = FormProvider.findById(position)
         formDetail.postValue(_formDetail)
     }
 
-    fun findAllTicket() {
+    fun findAllforms() {
         val _formDetailList = FormProvider.findAllTickets()
         formDetailList.postValue(_formDetailList)
     }
