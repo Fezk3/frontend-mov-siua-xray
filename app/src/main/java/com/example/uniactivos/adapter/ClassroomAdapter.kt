@@ -31,7 +31,7 @@ class ClassroomAdapter : RecyclerView.Adapter<MainViewHolder>() {
         val classr = classroom[position]
         holder.binding.Numero.text = classr.classNumber.toString()
 
-        holder.itemView.setOnClickListener {
+        holder.binding.btnViewDetails.setOnClickListener {
             val bundle = bundleOf(CLASSROOM_ID to classroom[position].classNumber.toString())
             it.findNavController().navigate(R.id.action_aulas_to_classroomViewFragment, bundle)
         }
@@ -43,7 +43,7 @@ class ClassroomAdapter : RecyclerView.Adapter<MainViewHolder>() {
     }
 
     companion object {
-        const val CLASSROOM_ID = "class_id"
+        const val CLASSROOM_ID = "class_number"
     }
 
 }
