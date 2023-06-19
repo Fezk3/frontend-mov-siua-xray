@@ -12,7 +12,7 @@ class LoginRepository constructor (
 ){
 
     // in-memory cache of the loggedInUser object
-    private var user: UserDetails? = null
+    private var user: UserLoginResponse? = null
 
     val isLoggedIn: Boolean
         get() = user != null
@@ -28,7 +28,7 @@ class LoginRepository constructor (
         sessionManager?.deleteAuthToken()
     }
 
-    suspend fun login(userLogin: UserLoginInput)  : Response<UserDetails> { //UserLoginResponse
+    suspend fun login(userLogin: UserLoginInput)  : Response<UserLoginResponse> { //UserLoginResponse
         val response = loginService.login(userLogin)
 
         if (response.isSuccessful) {
@@ -38,9 +38,10 @@ class LoginRepository constructor (
         return response
     }
 
-    private fun setLoggedInUser(loginRequest: UserDetails?, token:String) {
+    private fun setLoggedInUser(loginRequest: UserLoginResponse?, token:String) {
         this.user = loginRequest
         sessionManager?.saveAuthToken(token)
+        println(token)
 
         // If user credentials will be cached in local storage, it is recommended it be encrypted
         // @see https://developer.android.com/training/articles/keystore
