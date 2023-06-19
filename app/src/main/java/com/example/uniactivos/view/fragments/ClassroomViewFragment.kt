@@ -21,25 +21,14 @@ class ClassroomViewFragment : Fragment(){
     ): View {
         _binding = FragmentClassroomViewBinding.inflate(inflater, container, false)
         val view = binding.root
+
+        val classroomId = arguments?.getString("classroom")
+
+        binding.titleAula.text = classroomId.toString()
+
         return view
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        val classroomId = arguments?.getInt("classroom")
-        val classroomData =
-            classroomId?.let { classroomViewModel.getClassroomById(it) } // Obtener los datos de alguna fuente de datos
-
-        // Vincular los datos a los elementos de la interfaz de usuario utilizando el enlace de datos
-        //binding.fecha.text = classroomData.toString()
-        classroomViewModel.classroom.observe(viewLifecycleOwner) {
-            binding.fecha.text = it.classNumber
-        }
-
-
-        binding.button6.setOnClickListener{
-            findNavController().navigate(R.id.action_classroomViewFragment_to_homeProfe)
-        }
     }
     override fun onDestroyView() {
         super.onDestroyView()

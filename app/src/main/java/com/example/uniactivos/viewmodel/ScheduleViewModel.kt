@@ -10,7 +10,7 @@ class ScheduleViewModel : ViewModel() {
     var scheduleList = MutableLiveData<List<ScheduleDetails>>()
 
     fun findAllSchedules() {
-        val _scheduleDetail = ScheduleProvider.findAllSchedules()
+       val _scheduleDetail = ScheduleProvider.findAllSchedules()
         scheduleList.postValue(_scheduleDetail)
     }
 
