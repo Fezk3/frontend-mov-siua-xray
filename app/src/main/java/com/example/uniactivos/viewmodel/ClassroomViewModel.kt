@@ -25,6 +25,8 @@ class ClassroomViewModel(private val mainRepository: MainRepository) : ViewModel
         job = CoroutineScope(Dispatchers.IO).launch {
             loading.postValue(true)
             val response = mainRepository.getAllClassrooms()
+            println(mainRepository.getAllClassrooms())
+            println(response.body())
             withContext(Dispatchers.Main) {
                 if (response.isSuccessful) {
                     classroomList.postValue(response.body())

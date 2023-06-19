@@ -26,9 +26,9 @@
 
         <Button
             android:id="@+id/btnViewDetails"
-            android:layout_width="wrap_content"
+            android:layout_width="108dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="200dp"
+            android:layout_marginStart="180dp"
             android:text="Details" />
 
 
