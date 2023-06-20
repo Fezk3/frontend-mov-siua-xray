@@ -22,7 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5"
-        app:navGraph="@navigation/nav_guarda" />
+        app:navGraph="@navigation/nav_graph" />
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -37,7 +37,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mainContainer"
         app:layout_constraintVertical_bias="0.5"
-        app:menu="@menu/navegation_guarda" />
+        app:menu="@menu/navegation" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
