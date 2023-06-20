@@ -7,4 +7,6 @@ class MainRepository constructor(
 ){
     suspend fun getAllClassrooms() = mainService.getAll()
 
+    suspend fun getClassroomById(id: String) = mainService.getByClassNumber(id)
+
 }

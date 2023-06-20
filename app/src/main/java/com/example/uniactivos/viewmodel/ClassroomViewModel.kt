@@ -38,9 +38,19 @@ class ClassroomViewModel(private val mainRepository: MainRepository) : ViewModel
         }
     }
 
-    fun getClassroomById(id: Int) {
-        val _classroom = ClassroomProvider.findById(id)
-        classroom.postValue(_classroom)
+    fun getClassroomById(id: String) {
+        job = CoroutineScope(Dispatchers.IO).launch {
+            loading.postValue(true)
+            val response = mainRepository.getClassroomById(id)
+            withContext(Dispatchers.Main) {
+                if (response.isSuccessful) {
+                    classroom.postValue(response.body())
+                    loading.value = false
+                }else{
+                    onError("Error : ${response.message()}")
+                }
+            }
+        }
     }
 
     fun findAllClassrrom() {

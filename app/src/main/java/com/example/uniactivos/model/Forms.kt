@@ -21,8 +21,8 @@ data class FormHistoryDetails(
 )
 
 data class FormHistoryInput(
-    var formId: Long? = null,
-    var userId: Long? = null,
-    var statusId: Long? = null,
-    var date: Date? = null,
+    var formId: Long = 1,
+    var userId: Long = 1,
+    var statusId: Long = 1,
+    var date: String? = null,
 )
