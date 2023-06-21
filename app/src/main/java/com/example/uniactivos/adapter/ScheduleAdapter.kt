@@ -34,7 +34,9 @@ class ScheduleAdapter : RecyclerView.Adapter<MainViewHolder3>(){
         holder.binding.horafin.text = schedulee.endTime.toString()
 
         holder.binding.action.setOnClickListener {
+
             val bundle = bundleOf(SCHEDULE_CLASS to schedule[position].classroom?.classNumber.toString())
+
             it.findNavController().navigate(R.id.action_mySchedule2_to_teacherDynamicForm, bundle)
         }
 

@@ -56,7 +56,6 @@
             android:hint="Correo"
             android:inputType="textEmailAddress"
             android:selectAllOnFocus="true"
-            android:text="user@apellido.com"
             android:padding="10sp"
             android:drawableRight="@drawable/baseline_mail_24"
             />
@@ -73,19 +72,7 @@
             android:padding="10sp"
             android:imeOptions="actionDone"
             android:selectAllOnFocus="true"
-            android:text="1234"
             android:drawableRight="@drawable/baseline_lock_24"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="¿Olvidaste tu contraseña?"
-            android:textSize="16sp"
-            android:layout_marginTop="40sp"
-            android:layout_gravity="center_horizontal"
-            android:textColor="#000001"
-            android:id="@+id/txtLoginOlvidaste"
             />
 
         <Button
