@@ -3,7 +3,7 @@ package com.example.uniactivos.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.uniactivos.databinding.DynamicAssetItemBinding
+import com.example.uniactivos.databinding.StaticAssetItemBinding
 import com.example.uniactivos.model.AssetsDetails
 
 class StaticAssetAdapter : RecyclerView.Adapter<StaticViewHolder>() {
@@ -17,15 +17,15 @@ class StaticAssetAdapter : RecyclerView.Adapter<StaticViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, MainviewType: Int): StaticViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val binding = DynamicAssetItemBinding.inflate(inflater, parent, false)
+        val binding = StaticAssetItemBinding.inflate(inflater, parent, false)
 
         return StaticViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: StaticViewHolder, position: Int) {
         val asset = assets[position]
-        holder.binding.dynAssetName.text = asset.name
-        holder.binding.dynAssetCant.text = asset.cant.toString()
+        holder.binding.StatAssetName.text = asset.name
+        holder.binding.StatAssetCant.text = asset.cant.toString()
     }
 
     override fun getItemCount(): Int {
@@ -34,5 +34,5 @@ class StaticAssetAdapter : RecyclerView.Adapter<StaticViewHolder>() {
 }
 
 class StaticViewHolder(
-    val binding: DynamicAssetItemBinding
+    val binding: StaticAssetItemBinding
 ) : RecyclerView.ViewHolder(binding.root)

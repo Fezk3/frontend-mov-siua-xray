@@ -9,7 +9,9 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.uniactivos.R
+import com.example.uniactivos.adapter.ClassroomAdapter
 import com.example.uniactivos.adapter.DynamicAssetAdapter
+import com.example.uniactivos.adapter.ScheduleAdapter
 import com.example.uniactivos.databinding.FragmentReceiveDynamicsBinding
 import com.example.uniactivos.viewmodel.DynamicAssetViewModel
 
@@ -26,6 +28,9 @@ class ReceiveDynamics : Fragment(){
     ): View {
         _binding = FragmentReceiveDynamicsBinding.inflate(inflater, container, false)
         val view = binding.root
+
+        val classNumber = arguments?.getString(ScheduleAdapter.SCHEDULE_CLASS)
+        binding.aulaTextView.text = classNumber
 
         binding.rvDynamicAsset.layoutManager = LinearLayoutManager(requireContext())
         binding.rvDynamicAsset.adapter = adapter

@@ -23,131 +23,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="65sp"
+        android:layout_marginTop="15sp"
         android:orientation="vertical">
 
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:ignore="UselessParent">
-                <TableLayout
-                    android:id="@+id/tableLayout_pending_assets"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:stretchColumns="*"
-                    android:padding="16dp" >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvscheduleGuard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-                    <TableRow android:background="@color/black" >
-                        <TextView
-                            android:text="@string/table_head_classroom"
-                            android:textColor="@color/white"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:layout_column="1"
-                            android:padding="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-                        <TextView
-                            android:text="@string/table_head_professor"
-                            android:textColor="@color/white"
-                            android:textStyle="bold"
-                            android:textSize="18sp"
-                            android:layout_column="2"
-                            android:padding="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-                        <TextView
-                            android:text="@string/table_head_course"
-                            android:textColor="@color/white"
-                            android:textStyle="bold"
-                            android:textSize="18sp"
-                            android:layout_column="3"
-                            android:padding="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-                        <TextView
-                            android:text="@string/table_head_start_time"
-                            android:textColor="@color/white"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:layout_column="4"
-                            android:padding="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-                        <TextView
-                            android:text="@string/table_head_finish_time"
-                            android:textColor="@color/white"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:layout_column="5"
-                            android:padding="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-                        <TextView
-                            android:text="@string/table_head_accept"
-                            android:textColor="@color/white"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:layout_column="6"
-                            android:padding="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-                    </TableRow>
-
-                    <TableRow android:background="@color/gray_blue">
-                        <TextView
-                            android:text="Dato 1"
-                            android:textSize="18sp"
-                            android:textColor="@color/black"
-                            android:layout_column="1"
-                            android:padding="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"  />
-                        <TextView
-                            android:text="Dato 2"
-                            android:textSize="18sp"
-                            android:textColor="@color/black"
-                            android:layout_column="2"
-                            android:padding="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"  />
-                        <TextView
-                            android:text="Dato 3"
-                            android:textSize="18sp"
-                            android:textColor="@color/black"
-                            android:layout_column="3"
-                            android:padding="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"  />
-                        <TextView
-                            android:text="Dato 4"
-                            android:textSize="18sp"
-                            android:textColor="@color/black"
-                            android:layout_column="4"
-                            android:padding="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"  />
-                        <TextView
-                            android:text="Dato 5"
-                            android:textSize="18sp"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:layout_column="5"
-                            android:padding="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"  />
-                        <Button
-                            android:id="@+id/btn_accept"
-                            android:text="@string/btn_accept"
-                            android:textStyle="bold"
-                            android:layout_column="6"
-                            android:padding="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
-                        <!--android:onClick="openDialog"-->
-                    </TableRow>
-
-                </TableLayout>
-            </HorizontalScrollView>
-        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>
