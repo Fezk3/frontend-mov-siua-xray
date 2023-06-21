@@ -26,15 +26,15 @@ class ScheduleAdapter : RecyclerView.Adapter<MainViewHolder3>(){
     }
 
     override fun onBindViewHolder(holder: MainViewHolder3, position: Int) {
-        val schedule = schedule[position]
+        val schedulee = schedule[position]
 
-        holder.binding.aula.text = schedule.classroom?.classNumber.toString()
-        holder.binding.curso.text = schedule.courseName.toString()
-        holder.binding.horaini.text = schedule.startTime.toString()
-        holder.binding.horafin.text = schedule.endTime.toString()
+        holder.binding.aula.text = schedulee.classroom?.classNumber.toString()
+        holder.binding.curso.text = schedulee.courseName.toString()
+        holder.binding.horaini.text = schedulee.startTime.toString()
+        holder.binding.horafin.text = schedulee.endTime.toString()
 
         holder.binding.action.setOnClickListener {
-            val bundle = bundleOf(ScheduleAdapter.SCHEDULE_CLASS to schedule[position].calssroom.toString())
+            val bundle = bundleOf(ScheduleAdapter.SCHEDULE_CLASS to schedule[position].classroom.toString())
             it.findNavController().navigate(R.id.action_mySchedule2_to_teacherDynamicForm, bundle)
         }
 
