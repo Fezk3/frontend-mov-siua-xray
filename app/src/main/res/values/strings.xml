@@ -33,7 +33,7 @@
     <string name="table_head_name">Nombre</string>
     <string name="table_head_cantidad">Cantidad</string>
     <!-- receive profile_layout -->
-    <string name="profile_title">Perfil de usuario</string>
+    <string name="profile_title">About</string>
     <string name="btn_cambiar_contrasena">Cambiar contraseña</string>
     <string name="subtitle_cedual">Cedula:</string>
     <string name="subtitle_nombre">Nombre:</string>
