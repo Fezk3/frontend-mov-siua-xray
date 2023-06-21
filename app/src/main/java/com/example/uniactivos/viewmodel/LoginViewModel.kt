@@ -34,11 +34,13 @@ class LoginViewModel constructor(
                 if (response.isSuccessful) {
                     val token: String = ""
                     //val token = response.body()?.authorities.toString()
-                    MyApplication.sessionManager?.fetchAuthToken()?.let {
+                    /*MyApplication.sessionManager?.fetchAuthToken()?.let {
                         token = it
                     }
                     val jwtDecoder = JWTDecoder()
                     val role = jwtDecoder.decode(token)
+                    */
+
                     _loginResponse.value =
                         LoginResult(success = LoggedInUserView(username = response.body()?.username
                             ?: ""))
