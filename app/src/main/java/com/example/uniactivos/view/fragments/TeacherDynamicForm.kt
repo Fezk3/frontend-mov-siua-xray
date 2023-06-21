@@ -14,6 +14,8 @@ import com.example.uniactivos.databinding.FragmentTeacherDynamicFormBinding
 import com.example.uniactivos.viewmodel.ClassroomViewModel
 import com.example.uniactivos.viewmodel.DynamicAssetViewModel
 import com.example.uniactivos.adapter.DynamicAssetAdapter
+import com.example.uniactivos.adapter.ScheduleAdapter
+import com.example.uniactivos.adapter.ScheduleAdapter.Companion.SCHEDULE_CLASS
 import com.example.uniactivos.databinding.DynamicAssetItemBinding
 
 class TeacherDynamicForm : Fragment(){
@@ -29,6 +31,9 @@ class TeacherDynamicForm : Fragment(){
     ): View {
         _binding = FragmentTeacherDynamicFormBinding.inflate(inflater, container, false)
         val view = binding.root
+
+        val classNumber = arguments?.getString(SCHEDULE_CLASS)
+        binding.aulaDynAssetTeach.text = classNumber
 
         binding.rvDynamicAsset.layoutManager = LinearLayoutManager(requireContext())
         binding.rvDynamicAsset.adapter = adapter

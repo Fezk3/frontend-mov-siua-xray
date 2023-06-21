@@ -1,8 +1,5 @@
 package com.example.uniactivos.view
 
-import io.jsonwebtoken.Claims
-import io.jsonwebtoken.JwtException
-import io.jsonwebtoken.Jwts
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
@@ -175,10 +172,10 @@ class LoginActivity : AppCompatActivity() {
             println("No se pudo obtener el token del usuario logueado")
         }*/
 
-        val rol = "profesor"
+        //val rol = "profesor"
         // Initiate successful logged in experience
         val intent = Intent(this, MainActivity::class.java)
-        intent.putExtra("rol", rol)
+        intent.putExtra("username", username)
         startActivity(intent)
 
         Toast.makeText(

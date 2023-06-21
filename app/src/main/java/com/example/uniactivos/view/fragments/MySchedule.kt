@@ -6,20 +6,26 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.uniactivos.R
 import com.example.uniactivos.adapter.ClassroomAdapter
 import com.example.uniactivos.adapter.ScheduleAdapter
 import com.example.uniactivos.databinding.FragmentMyScheduleBinding
+import com.example.uniactivos.repository.MainRepository
+import com.example.uniactivos.repository.ScheduleRepository
+import com.example.uniactivos.service.MainService
+import com.example.uniactivos.service.ScheduleService
 import com.example.uniactivos.viewmodel.ClassroomViewModel
 import com.example.uniactivos.viewmodel.ScheduleViewModel
+import com.example.uniactivos.viewmodel.ViewModelFactory
 
 class MySchedule : Fragment(){
     private var _binding: FragmentMyScheduleBinding? = null
     private val binding get() = _binding!!
 
-    private val scheduleVM: ScheduleViewModel by viewModels()
+    private lateinit var scheduleViewModel: ScheduleViewModel
     private val adapter: ScheduleAdapter = ScheduleAdapter()
 
     override fun onCreateView(
@@ -32,11 +38,17 @@ class MySchedule : Fragment(){
         binding.rvschedule.layoutManager = LinearLayoutManager(requireContext())
         binding.rvschedule.adapter = adapter
 
-        scheduleVM.scheduleList.observe(viewLifecycleOwner) {
+        val scheduleService = ScheduleService.getInstance()
+        val scheduleRepository = ScheduleRepository(scheduleService)
+
+        scheduleViewModel = ViewModelProvider(this, ViewModelFactory(scheduleRepository)).get(ScheduleViewModel::class.java)
+
+        scheduleViewModel.scheduleList.observe(viewLifecycleOwner) {
             adapter.setScheduleList(it)
         }
 
-        scheduleVM.findAllSchedules()
+
+        scheduleViewModel.findAllSchedules()
 
         return view
     }
