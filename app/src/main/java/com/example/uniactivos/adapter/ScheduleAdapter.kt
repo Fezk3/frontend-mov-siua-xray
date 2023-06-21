@@ -2,7 +2,10 @@ package com.example.uniactivos.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.example.uniactivos.R
 import com.example.uniactivos.databinding.ScheduleItemBinding
 import com.example.uniactivos.model.ScheduleDetails
 
@@ -25,11 +28,24 @@ class ScheduleAdapter : RecyclerView.Adapter<MainViewHolder3>(){
     override fun onBindViewHolder(holder: MainViewHolder3, position: Int) {
         val schedule = schedule[position]
 
+        holder.binding.aula.text = schedule.classroom?.classNumber.toString()
+        holder.binding.curso.text = schedule.courseName.toString()
+        holder.binding.horaini.text = schedule.startTime.toString()
+        holder.binding.horafin.text = schedule.endTime.toString()
+
+        holder.binding.action.setOnClickListener {
+            val bundle = bundleOf(ScheduleAdapter.SCHEDULE_CLASS to schedule[position].calssroom.toString())
+            it.findNavController().navigate(R.id.action_mySchedule2_to_teacherDynamicForm, bundle)
+        }
 
     }
 
     override fun getItemCount(): Int {
         return schedule.size
+    }
+
+    companion object {
+        const val SCHEDULE_CLASS = "classroom"
     }
 
 }

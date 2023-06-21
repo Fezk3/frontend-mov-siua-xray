@@ -16,6 +16,10 @@ class ScheduleProvider {
             return scheduleList
         }
 
+        fun findByUserId(userId: Int): ScheduleDetails {
+            return scheduleList[userId]
+        }
+
         val scheduleList = listOf<ScheduleDetails>(
             ScheduleDetails(
                 1,
