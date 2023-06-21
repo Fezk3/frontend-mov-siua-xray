@@ -1,12 +1,18 @@
 package com.example.uniactivos.view
 
+import io.jsonwebtoken.Claims
+import io.jsonwebtoken.JwtException
+import io.jsonwebtoken.Jwts
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.uniactivos.databinding.ActivityLoginBinding
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
@@ -18,6 +24,7 @@ import com.example.uniactivos.R
 import com.example.uniactivos.model.UserLoginInput
 import com.example.uniactivos.utils.SessionManager
 import com.example.uniactivos.model.LoggedInUserView
+import com.example.uniactivos.utils.MyApplication
 import com.example.uniactivos.viewmodel.LoginViewModel
 import com.example.uniactivos.viewmodel.LoginViewModelFactory
 
@@ -122,12 +129,56 @@ class LoginActivity : AppCompatActivity() {
     /**
      * Success login to redirect the app to the next Screen
      */
+    /*fun obtenerTokenUsuarioLogueado(context: Context): String? {
+        var token: String? = null
+        MyApplication.sessionManager?.fetchAuthToken()?.let {
+            token = it
+            Log.d("Authorization", it)
+        }
+        return token
+    }
+
+    fun obtenerRolUsuarioDesdeTokenJWT(tokenJWT: String): String? {
+        try {
+            val claims: Claims = Jwts.parser().parseClaimsJwt(tokenJWT).body
+            return claims.get("rol", String::class.java)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+        return null
+    } */
+
     private fun updateUiWithUser(model: LoggedInUserView) {
         val welcome = getString(R.string.welcome)
         val username = model.username
+        //val firstName = model.firstName
+        //val rol = model.roleList?.get(0)?.name.toString()
+        //Log.d("Username", username)
+        //Log.d("Rol", rol)
+        //Log.d("FirstName", firstName)
+        /*MyApplication.sessionManager?.fetchAuthToken()?.let {
+            Log.d("Authorization", it)
+        }*/
 
+        //val auth = model.authorities.get(0).authority
+        //Log.d("Authorities", auth)
+
+        // If token has been saved, add it to the request
+
+        /*val tokenUsuario = obtenerTokenUsuarioLogueado(this)
+
+        if (tokenUsuario != null) {
+            // Aquí puedes hacer lo que necesites con el token del usuario logueado
+            Log.d("Token del usuario logueado:", tokenUsuario)
+        } else {
+            // Manejar el caso de que no se pueda obtener el token del usuario logueado
+            println("No se pudo obtener el token del usuario logueado")
+        }*/
+
+        val rol = "profesor"
         // Initiate successful logged in experience
         val intent = Intent(this, MainActivity::class.java)
+        intent.putExtra("rol", rol)
         startActivity(intent)
 
         Toast.makeText(

@@ -47,6 +47,12 @@ dependencies {
 
     def lifecycle_version = "2.4.1"
 
+    //Prueba token
+    //implementation 'io.jsonwebtoken:jjwt-api:0.11.2'
+    //implementation 'io.jsonwebtoken:jjwt-impl:0.11.2'
+    //implementation 'io.jsonwebtoken:jjwt-jackson:0.11.2'
+    //fin prueba token
+
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'

@@ -7,6 +7,9 @@ import androidx.lifecycle.ViewModel
 import com.example.uniactivos.R
 import com.example.uniactivos.model.*
 import com.example.uniactivos.repository.LoginRepository
+import com.example.uniactivos.utils.MyApplication
+//import io.jsonwebtoken.Claims
+//import io.jsonwebtoken.JwtParserBuilder
 import kotlinx.coroutines.*
 
 class LoginViewModel constructor(
@@ -29,6 +32,13 @@ class LoginViewModel constructor(
             val response = loginRepository.login(loginRequest)
             withContext(Dispatchers.Main) {
                 if (response.isSuccessful) {
+                    val token: String = ""
+                    //val token = response.body()?.authorities.toString()
+                    MyApplication.sessionManager?.fetchAuthToken()?.let {
+                        token = it
+                    }
+                    val jwtDecoder = JWTDecoder()
+                    val role = jwtDecoder.decode(token)
                     _loginResponse.value =
                         LoginResult(success = LoggedInUserView(username = response.body()?.username
                             ?: ""))
@@ -88,4 +98,15 @@ class LoginViewModel constructor(
         super.onCleared()
         job?.cancel()
     }
+/*
+    fun obtenerRolUsuarioDesdeTokenJWT(tokenJWT: String): String? {
+        try {
+            val parser = JwtParserBuilder().parse(tokenJWT)
+            val claims: Claims = parser.body
+            return claims.get("rol", String::class.java)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+        return null
+    }*/
 }

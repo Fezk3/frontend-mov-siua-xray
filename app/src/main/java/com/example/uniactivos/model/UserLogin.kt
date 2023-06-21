@@ -67,6 +67,10 @@ data class LoginResult(
  */
 data class LoggedInUserView(
     val username: String,
+    //var authorities: List<Authority>
+    //var firstName: String,
+    //var roleList: List<RoleDetails>? = null
+    var role: String,
     //... other data fields that may be accessible to the UI
 )
 

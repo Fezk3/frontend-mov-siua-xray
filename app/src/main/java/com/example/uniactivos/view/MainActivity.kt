@@ -20,6 +20,13 @@ class MainActivity : AppCompatActivity() {
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.mainContainer) as NavHostFragment
         val navController = navHostFragment.navController
+
+        when (intent.getStringExtra("rol")) {
+            "admin" -> navController.navigate(R.id.nav_admin)
+            "profesor" -> navController.navigate(R.id.nav_graph)
+            "guarda" -> navController.navigate(R.id.nav_guarda)
+            else -> navController.navigate(R.id.nav_guarda) // Por defecto, en caso de un rol no reconocido
+        }
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         bottomNavigationView.setupWithNavController(navController)
     }
