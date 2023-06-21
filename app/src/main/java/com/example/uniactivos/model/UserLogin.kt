@@ -70,7 +70,7 @@ data class LoggedInUserView(
     //var authorities: List<Authority>
     //var firstName: String,
     //var roleList: List<RoleDetails>? = null
-    var role: String,
+    //var role: String,
     //... other data fields that may be accessible to the UI
 )
 
