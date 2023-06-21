@@ -27,9 +27,8 @@ class HomeGuarda : Fragment(){
             findNavController().navigate(R.id.action_homeGuarda_to_pendingAssets)
         }
         binding.cardViewReporte.setOnClickListener{
-            findNavController().navigate(R.id.action_homeGuarda_to_reports)
+            findNavController().navigate(R.id.action_homeGuarda_to_formHistory)
         }
-
     }
     override fun onDestroyView() {
         super.onDestroyView()

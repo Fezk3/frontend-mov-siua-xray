@@ -3,12 +3,13 @@ package com.example.uniactivos.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.uniactivos.databinding.FormHistoryItemBinding
 import com.example.uniactivos.databinding.FormhisItemBinding
 import com.example.uniactivos.model.FormHistoryDetails
 
 class FormHistoryAdapter : RecyclerView.Adapter<MainViewHolder2>() {
 
-    private var form = mutableListOf<FormHistoryDetails>()
+    var form = mutableListOf<FormHistoryDetails>()
 
     fun setFormList(form: List<FormHistoryDetails>) {
         this.form = form.toMutableList()
@@ -17,7 +18,7 @@ class FormHistoryAdapter : RecyclerView.Adapter<MainViewHolder2>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder2 {
         val inflater = LayoutInflater.from(parent.context)
-        val binding = FormhisItemBinding.inflate(inflater, parent, false)
+        val binding = FormHistoryItemBinding.inflate(inflater, parent, false)
 
         return MainViewHolder2(binding)
     }
@@ -34,7 +35,11 @@ class FormHistoryAdapter : RecyclerView.Adapter<MainViewHolder2>() {
     override fun getItemCount(): Int {
         return form.size
     }
+//No se ocuparia esto porque no se necesita pasar informacion
+//    companion object {
+//        const val CLASSROOM_ID = "class_number"
+//    }
 }
 class MainViewHolder2(
-    val binding: FormhisItemBinding
+    val binding: FormHistoryItemBinding
 ) : RecyclerView.ViewHolder(binding.root)

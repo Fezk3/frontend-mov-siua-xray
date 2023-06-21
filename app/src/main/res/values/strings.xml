@@ -80,4 +80,7 @@
     <string name="invalid_username">Invalid Username</string>
     <string name="invalid_password">Invalid Password</string>
 
+    <!--Fragment History view-->
+    <string name="title_history">Historial de formularios</string>
+
 </resources>
