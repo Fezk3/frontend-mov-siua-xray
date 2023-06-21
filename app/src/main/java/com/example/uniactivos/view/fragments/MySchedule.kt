@@ -18,6 +18,7 @@ import com.example.uniactivos.repository.ScheduleRepository
 import com.example.uniactivos.service.MainService
 import com.example.uniactivos.service.ScheduleService
 import com.example.uniactivos.viewmodel.ClassroomViewModel
+import com.example.uniactivos.viewmodel.ScheduleModelFactory
 import com.example.uniactivos.viewmodel.ScheduleViewModel
 import com.example.uniactivos.viewmodel.ViewModelFactory
 
@@ -41,12 +42,11 @@ class MySchedule : Fragment(){
         val scheduleService = ScheduleService.getInstance()
         val scheduleRepository = ScheduleRepository(scheduleService)
 
-        scheduleViewModel = ViewModelProvider(this, ViewModelFactory(scheduleRepository)).get(ScheduleViewModel::class.java)
+        scheduleViewModel = ViewModelProvider(this, ScheduleModelFactory(scheduleRepository)).get(ScheduleViewModel::class.java)
 
         scheduleViewModel.scheduleList.observe(viewLifecycleOwner) {
             adapter.setScheduleList(it)
         }
-
 
         scheduleViewModel.findAllSchedules()
 
