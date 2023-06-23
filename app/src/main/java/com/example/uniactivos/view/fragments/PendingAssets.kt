@@ -21,6 +21,7 @@ class PendingAssets : Fragment(){
     private val binding get() = _binding!!
 
     private val scheduleVM: ScheduleViewModel by viewModels()
+    private val formVM: ClassroomViewModel by viewModels()
     private val adapter: ScheduleAdapter = ScheduleAdapter()
 
     override fun onCreateView(

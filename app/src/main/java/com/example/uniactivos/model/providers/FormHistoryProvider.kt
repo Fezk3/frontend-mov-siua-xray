@@ -9,7 +9,7 @@ import com.example.uniactivos.model.UserDetails
 
 
 class FormHistoryProvider {
-
+    /*
     companion object {
         fun findById(id: Int): FormHistoryDetails {
             return formhisList[id]
@@ -74,4 +74,6 @@ class FormHistoryProvider {
 
     }
 
+}
+*/
 }

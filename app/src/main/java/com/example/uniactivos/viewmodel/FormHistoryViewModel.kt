@@ -33,6 +33,21 @@ class FormHistoryViewModel(private val formHistoryRepository: FormHistoryReposit
         }
     }
 
+    fun getAllPendingFormHistory() {
+        job = CoroutineScope(Dispatchers.IO).launch {
+            loading.postValue(true)
+            val response = formHistoryRepository.getPendingFormsHistory()
+            withContext(Dispatchers.Main) {
+                if (response.isSuccessful) {
+                    formHistoryList.postValue(response.body())
+                    loading.value = false
+                } else {
+                    onError("Error: ${response.message()}")
+                }
+            }
+        }
+    }
+
     private fun onError(message: String) {
         errorMessage.value = message
         loading.value = false

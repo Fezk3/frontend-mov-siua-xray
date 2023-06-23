@@ -26,10 +26,10 @@ class FormHistoryAdapter : RecyclerView.Adapter<MainViewHolder2>() {
     override fun onBindViewHolder(holder: MainViewHolder2, position: Int) {
         val formr = form[position]
         holder.binding.id.text = formr.id.toString()
-        holder.binding.formid.text = formr.form?.id.toString()
-        holder.binding.user.text = formr.user?.firstName.toString()
+        holder.binding.formid.text = formr.id.toString()
+        holder.binding.user.text = formr.userId?.toString()
         holder.binding.date.text = formr.date.toString()
-        holder.binding.state.text = formr.state?.description.toString()
+        holder.binding.state.text = formr.state
     }
 
     override fun getItemCount(): Int {

@@ -14,15 +14,17 @@ data class StatusDetails(
 
 data class FormHistoryDetails(
     var id: Long? = null,
-    var form: FormDetails? = null,
-    var user: UserDetails? = null,
-    var date: String? = null,
-    var state: StatusDetails? = null,
+    var formid: Long? = null,
+    var userId: Long? = null,
+    var date: Date? = null,
+    var state: String? = null,
+    var classroomNumber: String? = null,
 )
 
 data class FormHistoryInput(
-    var formId: Long = 1,
-    var userId: Long = 1,
-    var statusId: Long = 1,
+    var formid: Long? = null,
+    var userId: Long? = null,
     var date: String? = null,
+    var state: String? = null,
+    var classroomNumber : String? = null,
 )

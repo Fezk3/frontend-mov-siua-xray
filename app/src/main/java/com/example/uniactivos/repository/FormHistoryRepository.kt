@@ -7,4 +7,6 @@ class FormHistoryRepository (
 
     suspend fun getAllFormsHistory() = formHistoryService.getAll()
 
+    suspend fun getPendingFormsHistory() = formHistoryService.getPending()
+
 }

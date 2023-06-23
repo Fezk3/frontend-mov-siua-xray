@@ -27,5 +27,8 @@ interface FormHistoryService {
         }
     }
 
+    @GET("v1/forms-history/pendientes")
+    suspend fun getPending() : Response<List<FormHistoryDetails>>
+
 }
 
