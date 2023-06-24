@@ -49,14 +49,14 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/report" />
+                    android:src="@drawable/reports" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="5dp"
-                    android:text="    Ver aulas      "
+                    android:text="    Ver reportes     "
                     android:textColor="@color/black"
                     android:textSize="20sp" />
             </LinearLayout>
