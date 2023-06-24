@@ -31,34 +31,7 @@ class DynamicAssetProvider {
                     1,
                     "Dinámico"
                 ),
-            ),
-            AssetsDetails(
-                1,
-                "bb",
-                5,
-                AssetTypeDetails(
-                    1,
-                    "Dinámico"
-                ),
-            ),
-            AssetsDetails(
-                1,
-                "cc",
-                2,
-                AssetTypeDetails(
-                    1,
-                    "Dinámico"
-                ),
-            ),
-            AssetsDetails(
-                1,
-                "dd",
-                3,
-                AssetTypeDetails(
-                    1,
-                    "Dinámico"
-                ),
-            ),
+            )
         )
     }
 }
