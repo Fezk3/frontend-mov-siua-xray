@@ -33,7 +33,7 @@ class FormHistoryPendingAdapter : RecyclerView.Adapter<FormHistoryPendingViewHol
         holder.binding.professor.text = formr.userId?.toString()
 
         holder.binding.actionGiveAssets.setOnClickListener {
-            val bundle = bundleOf(FORMHISTORY_ID to form[position].formid.toString(),
+            val bundle = bundleOf(FORMHISTORY_ID to form[position].id.toString(),
                 CLASSNUMBER to form[position].classroomNumber.toString())
             it.findNavController().navigate(R.id.action_pendingAssets_to_receiveDynamics3, bundle)
             //it.findNavController().navigate(R.id.action_receiveDynamics3_to_receiveStatics2, bundle)

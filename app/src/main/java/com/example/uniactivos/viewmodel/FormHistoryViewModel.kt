@@ -83,11 +83,14 @@ class FormHistoryViewModel(private val formHistoryRepository: FormHistoryReposit
                     }
                 }
             } catch (e: Exception) {
-                onError("Error: ${e.message}")
-                loading.postValue(false)
+                withContext(Dispatchers.Main) {
+                    onError("Error: ${e.message}")
+                    loading.postValue(false)
+                }
             }
         }
     }
+
 
 
     private fun onError(message: String) {

@@ -59,11 +59,12 @@ class ReceiveDynamics : Fragment(){
         val formHistoryService = FormHistoryService.getInstance()
         val formhistoryrepo = FormHistoryRepository(formHistoryService)
 
-        formHistoryViewModel = ViewModelProvider(this, FormHistoryFactory(formhistoryrepo)).get(
-            FormHistoryViewModel::class.java)
+        formHistoryViewModel = ViewModelProvider(this, FormHistoryFactory(formhistoryrepo)).get(FormHistoryViewModel::class.java)
 
+        val formHistoryId = arguments?.getString(FormHistoryPendingAdapter.FORMHISTORY_ID)?.toLongOrNull()
 
         binding.buttonAceptarActivos.setOnClickListener{
+            formHistoryViewModel.updateFormHistory(id = formHistoryId!!)
             findNavController().navigate(R.id.action_receiveDynamics3_to_receiveStatics2)
         }
     }
