@@ -15,20 +15,26 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
+        setContentView(binding.root)
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.mainContainer) as NavHostFragment
         val navController = navHostFragment.navController
-        /*
-        when (intent.getStringExtra("username")) {
-            "" -> navController.navigate(R.id.nav_admin)
-            "profe@gmail.com" -> navController.navigate(R.id.nav_graph)
-            "guarda@gmail.com" -> navController.navigate(R.id.nav_guarda)
-            else -> navController.navigate(R.id.nav_guarda) // Por defecto, en caso de un rol no reconocido
-        }*/
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+
+        val username = intent.getStringExtra("username")
+
+        when (username) {
+            "profe@gmail.com" -> {
+                bottomNavigationView.inflateMenu(R.menu.navegation)
+                navController.graph = navController.navInflater.inflate(R.navigation.nav_graph)
+            }
+            "guarda@gmail.com" -> {
+                bottomNavigationView.inflateMenu(R.menu.navegation_guarda)
+                navController.graph = navController.navInflater.inflate(R.navigation.nav_guarda)
+            }
+        }
+
         bottomNavigationView.setupWithNavController(navController)
     }
 }
