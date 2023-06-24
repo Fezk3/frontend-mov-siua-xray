@@ -7,6 +7,7 @@ import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.PUT
 import retrofit2.http.Path
 
 interface FormHistoryService {
@@ -18,6 +19,10 @@ interface FormHistoryService {
     suspend fun create(@Body forminput: FormHistoryInput) : Response<FormHistoryDetails>
     @GET("v1/forms-history/pendientes")
     suspend fun getPending() : Response<List<FormHistoryDetails>>
+
+    @PUT("v1/forms-history/{id}")
+    suspend fun update(@Path("id") id: Long) : Response<FormHistoryDetails>
+
     companion object{
         var formHistoryService : FormHistoryService? = null
         fun getInstance() : FormHistoryService {

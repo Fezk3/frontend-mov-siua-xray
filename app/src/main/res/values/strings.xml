@@ -2,7 +2,7 @@
     <string name="app_name">Uniactivos</string>
     <!-- my_schedule_layout -->
     <string name="my_schedule_title">My Horario</string>
-    <string name="my_schedule_date">Fecha: dd/mm/aa</string>
+    <string name="my_schedule_date">Fecha: 26/06/23</string>
     <string name="table_head_classroom">Aula</string>
     <string name="table_head_course">Curso</string>
     <string name="table_head_start_time">Hora\nInicio</string>

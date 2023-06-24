@@ -12,4 +12,6 @@ class FormHistoryRepository (
 
     suspend fun create(forminput: FormHistoryInput) = formHistoryService.create(forminput)
 
+    suspend fun update(id: Long) = formHistoryService.update(id)
+
 }
