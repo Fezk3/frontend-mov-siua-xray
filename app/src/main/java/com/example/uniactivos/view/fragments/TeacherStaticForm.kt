@@ -11,6 +11,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.uniactivos.R
 import com.example.uniactivos.adapter.StaticAssetAdapter
 import com.example.uniactivos.databinding.FragmentTeacherStaticFormBinding
+import com.example.uniactivos.model.FormHistoryInput
+import com.example.uniactivos.viewmodel.FormHistoryViewModel
 import com.example.uniactivos.viewmodel.StaticAssetViewModel
 
 class TeacherStaticForm : Fragment(){
@@ -18,6 +20,7 @@ class TeacherStaticForm : Fragment(){
     private val binding get() = _binding!!
 
     private val statAssetViewModel: StaticAssetViewModel by viewModels()
+    private lateinit var formHistoryViewModel: FormHistoryViewModel
     private val adapter: StaticAssetAdapter = StaticAssetAdapter()
 
     override fun onCreateView(
@@ -42,6 +45,7 @@ class TeacherStaticForm : Fragment(){
         super.onViewCreated(view, savedInstanceState)
 
         binding.button3.setOnClickListener{
+            formHistoryViewModel.createFormHistory(formHistoryInput = FormHistoryInput(userId = 1, date = "26/06/2023", state = "Recibido", classroomNumber = "C-18", formid = 1))
             findNavController().navigate(R.id.action_teacherStaticForm_to_homeProfe)
         }
     }
