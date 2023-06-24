@@ -39,5 +39,4 @@
         app:layout_constraintVertical_bias="0.5"
         app:menu="@menu/navegation_guarda" />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>

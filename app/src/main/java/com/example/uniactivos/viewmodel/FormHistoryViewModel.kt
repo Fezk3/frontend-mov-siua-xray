@@ -3,6 +3,7 @@ package com.example.uniactivos.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.uniactivos.model.FormHistoryDetails
+import com.example.uniactivos.model.FormHistoryInput
 import com.example.uniactivos.model.providers.FormHistoryProvider
 import com.example.uniactivos.repository.FormHistoryRepository
 import kotlinx.coroutines.launch
@@ -44,6 +45,26 @@ class FormHistoryViewModel(private val formHistoryRepository: FormHistoryReposit
                 } else {
                     onError("Error: ${response.message()}")
                 }
+            }
+        }
+    }
+
+    fun createFormHistory(formHistoryInput: FormHistoryInput) {
+        job = CoroutineScope(Dispatchers.IO).launch {
+            loading.postValue(true)
+            try {
+                val response = formHistoryRepository.create(formHistoryInput)
+                withContext(Dispatchers.Main) {
+                    if (response.isSuccessful) {
+                        loading.postValue(false)
+                    } else {
+                        onError("Error: ${response.message()}")
+                    }
+                }
+            } catch (e: Exception) {
+                onError("Error: ${e.message}")
+            } finally {
+                loading.postValue(false)
             }
         }
     }
