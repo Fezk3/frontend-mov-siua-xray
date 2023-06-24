@@ -6,12 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.uniactivos.R
 import com.example.uniactivos.adapter.StaticAssetAdapter
 import com.example.uniactivos.databinding.FragmentTeacherStaticFormBinding
 import com.example.uniactivos.model.FormHistoryInput
+import com.example.uniactivos.repository.FormHistoryRepository
+import com.example.uniactivos.service.FormHistoryService
+import com.example.uniactivos.viewmodel.FormHistoryFactory
 import com.example.uniactivos.viewmodel.FormHistoryViewModel
 import com.example.uniactivos.viewmodel.StaticAssetViewModel
 
@@ -43,6 +47,10 @@ class TeacherStaticForm : Fragment(){
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val formHistoryService = FormHistoryService.getInstance()
+        val formhistoryrepo = FormHistoryRepository(formHistoryService)
+
+        formHistoryViewModel = ViewModelProvider(this, FormHistoryFactory(formhistoryrepo)).get(FormHistoryViewModel::class.java)
 
         binding.button3.setOnClickListener{
             formHistoryViewModel.createFormHistory(FormHistoryInput(userId = 1, date = "26/06/2023", state = "Recibido", classroomNumber = "C-18", formid = 1))
