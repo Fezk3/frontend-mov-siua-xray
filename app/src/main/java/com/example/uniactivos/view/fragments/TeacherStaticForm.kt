@@ -45,7 +45,7 @@ class TeacherStaticForm : Fragment(){
         super.onViewCreated(view, savedInstanceState)
 
         binding.button3.setOnClickListener{
-            formHistoryViewModel.createFormHistory(formHistoryInput = FormHistoryInput(userId = 1, date = "26/06/2023", state = "Recibido", classroomNumber = "C-18", formid = 1))
+            //formHistoryViewModel.createFormHistory(FormHistoryInput(userId = 1, date = "26/06/2023", state = "Recibido", classroomNumber = "C-18", formid = 1))
             findNavController().navigate(R.id.action_teacherStaticForm_to_homeProfe)
         }
     }
