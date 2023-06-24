@@ -69,6 +69,27 @@ class FormHistoryViewModel(private val formHistoryRepository: FormHistoryReposit
         }
     }
 
+    fun updateFormHistory(id: Long) {
+        job = CoroutineScope(Dispatchers.IO).launch {
+            loading.postValue(true)
+            try {
+                val response = formHistoryRepository.update(id)
+                withContext(Dispatchers.Main) {
+                    if (response.isSuccessful) {
+                        loading.postValue(false)
+                    } else {
+                        onError("Error: ${response.message()}")
+                        loading.postValue(false)
+                    }
+                }
+            } catch (e: Exception) {
+                onError("Error: ${e.message}")
+                loading.postValue(false)
+            }
+        }
+    }
+
+
     private fun onError(message: String) {
         errorMessage.value = message
         loading.value = false
