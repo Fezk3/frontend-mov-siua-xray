@@ -54,9 +54,9 @@ class MySchedule : Fragment(){
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        binding.btnCheck.setOnClickListener {
-            findNavController().navigate(R.id.action_mySchedule2_to_teacherDynamicForm)
+        
+        binding.btnVolver.setOnClickListener {
+            findNavController().navigate(R.id.action_mySchedule2_to_homeProfe)
         }
     }
     override fun onDestroyView() {

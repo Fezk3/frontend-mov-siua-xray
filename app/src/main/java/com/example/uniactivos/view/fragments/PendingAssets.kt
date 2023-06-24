@@ -45,9 +45,6 @@ class PendingAssets : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnCheck.setOnClickListener{
-            findNavController().navigate(R.id.action_pendingAssets_to_receiveDynamics3)
-        }
     }
     override fun onDestroyView() {
         super.onDestroyView()

@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
+import com.example.uniactivos.R
 import com.example.uniactivos.adapter.ClassroomAdapter.Companion.CLASSROOM_ID
 import com.example.uniactivos.databinding.FragmentClassroomViewBinding
 import com.example.uniactivos.viewmodel.ClassroomViewModel
@@ -31,6 +33,9 @@ class ClassroomViewFragment : Fragment(){
         return view
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        binding.button6.setOnClickListener{
+            findNavController().navigate(R.id.action_classroomViewFragment_to_homeProfe)
+        }
     }
     override fun onDestroyView() {
         super.onDestroyView()
