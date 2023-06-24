@@ -36,8 +36,8 @@ class MySchedule : Fragment(){
         _binding = FragmentMyScheduleBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        binding.rvschedule.layoutManager = LinearLayoutManager(requireContext())
-        binding.rvschedule.adapter = adapter
+        binding.rvFormHistoryProfessor.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvFormHistoryProfessor.adapter = adapter
 
         val scheduleService = ScheduleService.getInstance()
         val scheduleRepository = ScheduleRepository(scheduleService)

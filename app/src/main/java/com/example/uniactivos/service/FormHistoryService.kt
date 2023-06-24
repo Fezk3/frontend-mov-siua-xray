@@ -16,7 +16,8 @@ interface FormHistoryService {
 
     @POST("v1/forms-history")
     suspend fun create(@Body forminput: FormHistoryInput) : Response<FormHistoryDetails>
-
+    @GET("v1/forms-history/pendientes")
+    suspend fun getPending() : Response<List<FormHistoryDetails>>
     companion object{
         var formHistoryService : FormHistoryService? = null
         fun getInstance() : FormHistoryService {
@@ -26,9 +27,5 @@ interface FormHistoryService {
             return formHistoryService!!
         }
     }
-
-    @GET("v1/forms-history/pendientes")
-    suspend fun getPending() : Response<List<FormHistoryDetails>>
-
 }
 

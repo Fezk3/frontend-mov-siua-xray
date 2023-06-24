@@ -10,41 +10,46 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.uniactivos.R
 import com.example.uniactivos.adapter.ClassroomAdapter
+import com.example.uniactivos.adapter.FormHistoryPendingAdapter
 import com.example.uniactivos.adapter.ScheduleAdapter
 import com.example.uniactivos.databinding.FragmentMyScheduleBinding
 import com.example.uniactivos.databinding.FragmentPendingAssetsBinding
 import com.example.uniactivos.viewmodel.ClassroomViewModel
+import com.example.uniactivos.viewmodel.FormHistoryViewModel
 import com.example.uniactivos.viewmodel.ScheduleViewModel
 
 class PendingAssets : Fragment(){
-    private var _binding: FragmentMyScheduleBinding? = null
+    private var _binding: FragmentPendingAssetsBinding? = null
     private val binding get() = _binding!!
 
-    private val scheduleVM: ScheduleViewModel by viewModels()
-    private val formVM: ClassroomViewModel by viewModels()
-    private val adapter: ScheduleAdapter = ScheduleAdapter()
+    private lateinit var formHistoryVM: FormHistoryViewModel
+    
+    private val adapter: FormHistoryPendingAdapter = FormHistoryPendingAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentMyScheduleBinding.inflate(inflater, container, false)
+        _binding = FragmentPendingAssetsBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        binding.rvschedule.layoutManager = LinearLayoutManager(requireContext())
-        binding.rvschedule.adapter = adapter
+        binding.rvFormHistoryGuard.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvFormHistoryGuard.adapter = adapter
 
-        scheduleVM.scheduleList.observe(viewLifecycleOwner) {
-            adapter.setScheduleList(it)
+        formHistoryVM.formHistoryList.observe(viewLifecycleOwner) {
+            adapter.setFormList(it)
         }
 
-        scheduleVM.findAllSchedules()
+        formHistoryVM.getAllPendingFormHistory()
 
         return view
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        /*binding.btnCheck.setOnClickListener{
+            findNavController().navigate(R.id.action_pendingAssets_to_receiveDynamics3)
+        }*/
     }
     override fun onDestroyView() {
         super.onDestroyView()
