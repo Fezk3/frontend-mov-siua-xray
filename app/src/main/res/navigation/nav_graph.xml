@@ -62,6 +62,9 @@
         <action
             android:id="@+id/action_mySchedule2_to_teacherDynamicForm"
             app:destination="@id/teacherDynamicForm" />
+        <action
+            android:id="@+id/action_mySchedule2_to_homeProfe"
+            app:destination="@id/homeProfe" />
     </fragment>
     <fragment
         android:id="@+id/profile"

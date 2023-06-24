@@ -43,7 +43,7 @@
             app:destination="@id/formHistory" />
     </fragment>
     <fragment
-        android:id="@+id/profile2"
+        android:id="@+id/profile"
         android:name="com.example.uniactivos.view.fragments.Profile"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
