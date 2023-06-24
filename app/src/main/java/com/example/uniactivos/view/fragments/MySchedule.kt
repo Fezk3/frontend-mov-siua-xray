@@ -36,8 +36,8 @@ class MySchedule : Fragment(){
         _binding = FragmentMyScheduleBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        binding.rvFormHistoryProfessor.layoutManager = LinearLayoutManager(requireContext())
-        binding.rvFormHistoryProfessor.adapter = adapter
+        binding.rvschedule.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvschedule.adapter = adapter
 
         val scheduleService = ScheduleService.getInstance()
         val scheduleRepository = ScheduleRepository(scheduleService)
@@ -54,7 +54,7 @@ class MySchedule : Fragment(){
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
+
         binding.btnVolver.setOnClickListener {
             findNavController().navigate(R.id.action_mySchedule2_to_homeProfe)
         }

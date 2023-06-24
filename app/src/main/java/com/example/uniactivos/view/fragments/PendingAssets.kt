@@ -27,7 +27,7 @@ class PendingAssets : Fragment(){
     private val binding get() = _binding!!
 
     private lateinit var formHistoryViewModel: FormHistoryViewModel
-    
+
     private val adapter: FormHistoryPendingAdapter = FormHistoryPendingAdapter()
 
     override fun onCreateView(
@@ -37,8 +37,8 @@ class PendingAssets : Fragment(){
         _binding = FragmentPendingAssetsBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        binding.rvFormHistoryGuard.layoutManager = LinearLayoutManager(requireContext())
-        binding.rvFormHistoryGuard.adapter = adapter
+        binding.rvscheduleGuard.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvscheduleGuard.adapter = adapter
 
         val formHistoryService = FormHistoryService.getInstance()
         val formhistoryrepo = FormHistoryRepository(formHistoryService)
