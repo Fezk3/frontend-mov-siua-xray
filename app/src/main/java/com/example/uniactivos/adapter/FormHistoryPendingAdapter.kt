@@ -35,8 +35,10 @@ class FormHistoryPendingAdapter : RecyclerView.Adapter<FormHistoryPendingViewHol
         //holder.binding.state.text = formr.state
 
         holder.binding.actionGiveAssets.setOnClickListener {
-            val bundle = bundleOf(FORMHISTORY_ID to form[position].formid.toString())
+            val bundle = bundleOf(FORMHISTORY_ID to form[position].formid.toString(),
+                CLASSNUMBER to form[position].classroomNumber.toString())
             it.findNavController().navigate(R.id.action_pendingAssets_to_receiveDynamics3, bundle)
+            it.findNavController().navigate(R.id.action_receiveDynamics3_to_receiveStatics2, bundle)
         }
     }
 
@@ -46,6 +48,7 @@ class FormHistoryPendingAdapter : RecyclerView.Adapter<FormHistoryPendingViewHol
 
     companion object {
         const val FORMHISTORY_ID = "formHistory"
+        const val CLASSNUMBER = "classNumber"
     }
 
 //No se ocuparia esto porque no se necesita pasar informacion
