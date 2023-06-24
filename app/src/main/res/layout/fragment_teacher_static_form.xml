@@ -181,13 +181,9 @@
                 android:layout_height="wrap_content"
                 android:text="@string/btn_aceptar"
                 android:textSize="20sp" />
-
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:ignore="UselessParent"
-                android:visibility="invisible"/>
         </LinearLayout>
+
+
     </LinearLayout>
 
 
