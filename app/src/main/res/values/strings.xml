@@ -2,7 +2,7 @@
     <string name="app_name">Uniactivos</string>
     <!-- my_schedule_layout -->
     <string name="my_schedule_title">My Horario</string>
-    <string name="my_schedule_date">Fecha: dd/mm/aa</string>
+    <string name="my_schedule_date">Fecha: 26/06/23</string>
     <string name="table_head_classroom">Aula</string>
     <string name="table_head_course">Curso</string>
     <string name="table_head_start_time">Hora\nInicio</string>
@@ -33,7 +33,7 @@
     <string name="table_head_name">Nombre</string>
     <string name="table_head_cantidad">Cantidad</string>
     <!-- receive profile_layout -->
-    <string name="profile_title">Perfil de usuario</string>
+    <string name="profile_title">About</string>
     <string name="btn_cambiar_contrasena">Cambiar contraseña</string>
     <string name="subtitle_cedual">Cedula:</string>
     <string name="subtitle_nombre">Nombre:</string>
@@ -75,4 +75,12 @@
     <string name="txt_subtitle_change_pass">Cambio de Contraseña</string>
     <string name="txt_professor">Profesor</string>
     <string name="title_activity_login">LoginActivity</string>
+    <string name="welcome">Welcome</string>
+    <string name="login_failed">Failed login</string>
+    <string name="invalid_username">Invalid Username</string>
+    <string name="invalid_password">Invalid Password</string>
+
+    <!--Fragment History view-->
+    <string name="title_history">Historial de formularios</string>
+
 </resources>

@@ -7,7 +7,7 @@
     android:background="#FFFFFF"
     android:gravity="center_horizontal|center_vertical"
     android:orientation="vertical"
-    tools:context=".LoginActivity">
+    tools:context=".view.LoginActivity">
 
 
     <fragment
@@ -22,7 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5"
-        app:navGraph="@navigation/nav_graph" />
+        app:navGraph="@navigation/nav_guarda" />
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -37,7 +37,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mainContainer"
         app:layout_constraintVertical_bias="0.5"
-        app:menu="@menu/navegation" />
-
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
