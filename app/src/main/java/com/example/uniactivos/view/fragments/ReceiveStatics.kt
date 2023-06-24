@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.uniactivos.R
+import com.example.uniactivos.adapter.FormHistoryPendingAdapter
 import com.example.uniactivos.adapter.StaticAssetAdapter
 import com.example.uniactivos.databinding.FragmentReceiveStaticsBinding
 import com.example.uniactivos.viewmodel.StaticAssetViewModel
@@ -29,6 +30,11 @@ class ReceiveStatics : Fragment(){
 
         binding.rvStaticAsset.layoutManager = LinearLayoutManager(requireContext())
         binding.rvStaticAsset.adapter = adapter
+
+        val classNumber = arguments?.getString(FormHistoryPendingAdapter.CLASSNUMBER)
+        //val form = arguments?.getParcelable<FormHistoryDetails>(FORMHISTORY_OBJECT)
+
+        //binding.aula.text = classNumber
 
         statAssetViewModel.assetDetailList.observe(viewLifecycleOwner) {
             adapter.setAssetList(it)

@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.uniactivos.R
 import com.example.uniactivos.adapter.DynamicAssetAdapter
-import com.example.uniactivos.adapter.FormHistoryPendingAdapter.Companion.FORMHISTORY_ID
+import com.example.uniactivos.adapter.FormHistoryPendingAdapter
 import com.example.uniactivos.adapter.ScheduleAdapter
 import com.example.uniactivos.databinding.FragmentReceiveDynamicsBinding
 import com.example.uniactivos.repository.FormHistoryRepository
@@ -35,8 +35,12 @@ class ReceiveDynamics : Fragment(){
         _binding = FragmentReceiveDynamicsBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        val classNumber = arguments?.getString(ScheduleAdapter.SCHEDULE_CLASS)
+        val formHisId = arguments?.getString(FormHistoryPendingAdapter.FORMHISTORY_ID)
+        val classNumber = arguments?.getString(FormHistoryPendingAdapter.CLASSNUMBER)
+
         binding.aulaTextView.text = classNumber
+
+        //binding.aulaTextView.text = classNumber
 
         binding.rvDynamicAsset.layoutManager = LinearLayoutManager(requireContext())
         binding.rvDynamicAsset.adapter = adapter
