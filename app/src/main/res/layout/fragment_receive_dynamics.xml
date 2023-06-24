@@ -51,60 +51,6 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textView15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50sp"
-                android:text="@string/title_profesor"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:background="@drawable/text_border"
-                android:padding="2sp"/>
-
-            <TextView
-                android:id="@+id/professorTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Marvin"
-                android:layout_marginStart="8sp"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center_horizontal"
-            android:layout_marginBottom="25sp"
-            >
-
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/title_guarda"
-                android:textColor="@color/black"
-                android:layout_marginStart="60sp"
-                android:textSize="20sp"
-                android:background="@drawable/text_border"
-                android:padding="2sp"/>
-
-            <TextView
-                android:id="@+id/guardTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Juan"
-                android:layout_marginStart="8sp"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                />
-
-            <TextView
                 android:id="@+id/textView16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -121,68 +67,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8sp"
-                android:text="23/04/12"
+                android:text="26/06/23"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:layout_marginBottom="25sp">
-
-
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/title_hora_inicio"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:background="@drawable/text_border"
-                android:padding="2sp"
-                />
-
-            <TextView
-                android:id="@+id/startTimeTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8sp"
-                android:text="11:00"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                />
-
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30sp"
-                android:text="@string/title_hora_fin"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:background="@drawable/text_border"
-                android:padding="2sp"/>
-
-            <TextView
-                android:id="@+id/endTimeTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8sp"
-                android:text="11:00"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_gravity="center">
 
 
         </LinearLayout>
@@ -208,24 +95,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/buttonAceptarActivos"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:layout_marginTop="20sp">
-
-
-                <Button
-                    android:id="@+id/buttonAceptarActivos"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@color/blue"
-                    android:text="@string/btn_aceptar"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
+                android:background="@color/blue"
+                android:text="@string/btn_aceptar"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
