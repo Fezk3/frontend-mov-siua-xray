@@ -34,7 +34,7 @@ class ReceiveStatics : Fragment(){
         val classNumber = arguments?.getString(FormHistoryPendingAdapter.CLASSNUMBER)
         //val form = arguments?.getParcelable<FormHistoryDetails>(FORMHISTORY_OBJECT)
 
-        binding.aula.text = classNumber
+        //binding.aula.text = classNumber
 
         statAssetViewModel.assetDetailList.observe(viewLifecycleOwner) {
             adapter.setAssetList(it)

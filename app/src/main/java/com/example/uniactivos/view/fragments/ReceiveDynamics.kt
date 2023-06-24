@@ -35,10 +35,12 @@ class ReceiveDynamics : Fragment(){
         _binding = FragmentReceiveDynamicsBinding.inflate(inflater, container, false)
         val view = binding.root
 
+        val formHisId = arguments?.getString(FormHistoryPendingAdapter.FORMHISTORY_ID)
         val classNumber = arguments?.getString(FormHistoryPendingAdapter.CLASSNUMBER)
-        //val form = arguments?.getParcelable<FormHistoryDetails>(FORMHISTORY_OBJECT)
 
         binding.aulaTextView.text = classNumber
+
+        //binding.aulaTextView.text = classNumber
 
         binding.rvDynamicAsset.layoutManager = LinearLayoutManager(requireContext())
         binding.rvDynamicAsset.adapter = adapter
