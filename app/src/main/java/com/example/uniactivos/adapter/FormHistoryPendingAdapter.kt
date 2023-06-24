@@ -29,16 +29,14 @@ class FormHistoryPendingAdapter : RecyclerView.Adapter<FormHistoryPendingViewHol
     override fun onBindViewHolder(holder: FormHistoryPendingViewHolder, position: Int) {
         val formr = form[position]
         holder.binding.classroom.text = formr.classroomNumber.toString()
-        //holder.binding.formid.text = formr.id.toString()
-        //holder.binding.user.text = formr.userId?.toString()
-        //holder.binding.date.text = formr.date.toString()
-        //holder.binding.state.text = formr.state
+        holder.binding.idForm.text = formr.formid.toString()
+        holder.binding.professor.text = formr.userId?.toString()
 
         holder.binding.actionGiveAssets.setOnClickListener {
             val bundle = bundleOf(FORMHISTORY_ID to form[position].formid.toString(),
                 CLASSNUMBER to form[position].classroomNumber.toString())
             it.findNavController().navigate(R.id.action_pendingAssets_to_receiveDynamics3, bundle)
-            it.findNavController().navigate(R.id.action_receiveDynamics3_to_receiveStatics2, bundle)
+            //it.findNavController().navigate(R.id.action_receiveDynamics3_to_receiveStatics2, bundle)
         }
     }
 
