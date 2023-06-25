@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "232709268321",
+    "project_id": "xray-uniactivos",
+    "storage_bucket": "xray-uniactivos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:232709268321:android:4ac570d6bf8b9f8483db20",
+        "android_client_info": {
+          "package_name": "com.example.uniactivos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "232709268321-6tnn03glf4rt7b91id4tof112fab5sbl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC577kc2rA6TeWlqq-5av_DYShJtu3HlK8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "232709268321-6tnn03glf4rt7b91id4tof112fab5sbl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
