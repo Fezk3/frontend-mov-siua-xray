@@ -148,32 +148,9 @@ class LoginActivity : AppCompatActivity() {
     private fun updateUiWithUser(model: LoggedInUserView) {
         val welcome = getString(R.string.welcome)
         val username = model.username
-        //val firstName = model.firstName
-        //val rol = model.roleList?.get(0)?.name.toString()
-        //Log.d("Username", username)
-        //Log.d("Rol", rol)
-        //Log.d("FirstName", firstName)
-        /*MyApplication.sessionManager?.fetchAuthToken()?.let {
-            Log.d("Authorization", it)
-        }*/
 
-        //val auth = model.authorities.get(0).authority
-        //Log.d("Authorities", auth)
+        finish()
 
-        // If token has been saved, add it to the request
-
-        /*val tokenUsuario = obtenerTokenUsuarioLogueado(this)
-
-        if (tokenUsuario != null) {
-            // Aquí puedes hacer lo que necesites con el token del usuario logueado
-            Log.d("Token del usuario logueado:", tokenUsuario)
-        } else {
-            // Manejar el caso de que no se pueda obtener el token del usuario logueado
-            println("No se pudo obtener el token del usuario logueado")
-        }*/
-
-        //val rol = "profesor"
-        // Initiate successful logged in experience
         val intent = Intent(this, MainActivity::class.java)
         intent.putExtra("username", username)
         startActivity(intent)

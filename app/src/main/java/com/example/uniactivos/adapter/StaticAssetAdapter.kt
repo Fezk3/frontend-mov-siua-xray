@@ -25,7 +25,7 @@ class StaticAssetAdapter : RecyclerView.Adapter<StaticViewHolder>() {
     override fun onBindViewHolder(holder: StaticViewHolder, position: Int) {
         val asset = assets[position]
         holder.binding.StatAssetName.text = asset.name
-        holder.binding.StatAssetCant.text = asset.cant.toString()
+        holder.binding.StatAssetCant.text = asset.quantity.toString()
     }
 
     override fun getItemCount(): Int {

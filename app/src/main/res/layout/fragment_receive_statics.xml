@@ -68,7 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8sp"
-                android:text="23/04/12"
+                android:text="26/06/23"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
