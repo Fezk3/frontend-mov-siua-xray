@@ -26,7 +26,7 @@ class DynamicAssetAdapter : RecyclerView.Adapter<ViewHolder>() {
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             val asset = assets[position]
             holder.binding.dynAssetName.text = asset.name
-            holder.binding.dynAssetCant.text = asset.cant.toString()
+            holder.binding.dynAssetCant.text = asset.quantity.toString()
         }
 
         override fun getItemCount(): Int {

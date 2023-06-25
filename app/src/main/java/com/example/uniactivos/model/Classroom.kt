@@ -13,7 +13,7 @@ data class Classroom(
 data class AssetsDetails(
     var id: Long? = null,
     var name: String? = null,
-    var cant: Long? = null,
+    var quantity: Int? = null,
     var assetType: AssetTypeDetails? = null,
 )
 data class AssetTypeDetails(
