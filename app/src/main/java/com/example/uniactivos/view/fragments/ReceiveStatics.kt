@@ -40,7 +40,8 @@ class ReceiveStatics : Fragment(){
         binding.rvStaticAsset.layoutManager = LinearLayoutManager(requireContext())
         binding.rvStaticAsset.adapter = adapter
 
-        val classNumber = arguments?.getString(FormHistoryPendingAdapter.CLASSNUMBER)
+        //val classNumber = arguments?.getString(FormHistoryPendingAdapter.CLASSNUMBER)
+        val classNumber = arguments?.getString(ReceiveDynamics.CLASS_NUMBER)
 
         val statAssetService = StaticAssetService.getInstance()
         val statAssetRepo = StaticAssetRepository(statAssetService)
@@ -52,7 +53,7 @@ class ReceiveStatics : Fragment(){
             adapter.setAssetList(it)
         }
 
-        statAssetViewModel.getStatByClassroomNumber(classNumber!!)
+        statAssetViewModel.getStatByClassroomNumber(classNumber!!) //classNumber!!
         //statAssetViewModel.findAllStatAssets()
 
         return view

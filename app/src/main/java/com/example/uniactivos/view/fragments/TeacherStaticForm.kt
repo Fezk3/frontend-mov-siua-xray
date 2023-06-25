@@ -10,20 +10,24 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.uniactivos.R
+import com.example.uniactivos.adapter.FormHistoryPendingAdapter
 import com.example.uniactivos.adapter.StaticAssetAdapter
 import com.example.uniactivos.databinding.FragmentTeacherStaticFormBinding
 import com.example.uniactivos.model.FormHistoryInput
 import com.example.uniactivos.repository.FormHistoryRepository
+import com.example.uniactivos.repository.StaticAssetRepository
 import com.example.uniactivos.service.FormHistoryService
+import com.example.uniactivos.service.StaticAssetService
 import com.example.uniactivos.viewmodel.FormHistoryFactory
 import com.example.uniactivos.viewmodel.FormHistoryViewModel
 import com.example.uniactivos.viewmodel.StaticAssetViewModel
+import com.example.uniactivos.viewmodel.StaticAssetViewModelFactory
 
 class TeacherStaticForm : Fragment(){
     private var _binding: FragmentTeacherStaticFormBinding? = null
     private val binding get() = _binding!!
 
-    private val statAssetViewModel: StaticAssetViewModel by viewModels()
+    private lateinit var statAssetViewModel: StaticAssetViewModel
     private lateinit var formHistoryViewModel: FormHistoryViewModel
     private val adapter: StaticAssetAdapter = StaticAssetAdapter()
 
@@ -37,11 +41,21 @@ class TeacherStaticForm : Fragment(){
         binding.rvStaticAsset.layoutManager = LinearLayoutManager(requireContext())
         binding.rvStaticAsset.adapter = adapter
 
+        //val classNumber = arguments?.getString(FormHistoryPendingAdapter.CLASSNUMBER)
+        val classNumber = arguments?.getString(TeacherDynamicForm.CLASS_NUMBER)
+
+        val statAssetService = StaticAssetService.getInstance()
+        val statAssetRepo = StaticAssetRepository(statAssetService)
+
+        statAssetViewModel = ViewModelProvider(this, StaticAssetViewModelFactory(statAssetRepo)).get(
+            StaticAssetViewModel::class.java)
+
         statAssetViewModel.assetDetailList.observe(viewLifecycleOwner) {
             adapter.setAssetList(it)
         }
 
-        statAssetViewModel.findAllStatAssets()
+        //statAssetViewModel.findAllStatAssets()
+        statAssetViewModel.getStatByClassroomNumber(classNumber!!) //"C-18"
 
         return view
     }

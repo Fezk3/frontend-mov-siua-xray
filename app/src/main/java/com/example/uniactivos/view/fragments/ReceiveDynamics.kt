@@ -79,10 +79,10 @@ class ReceiveDynamics : Fragment(){
         val formHistoryId = arguments?.getString(FormHistoryPendingAdapter.FORMHISTORY_ID)?.toLongOrNull()
 
         binding.buttonAceptarActivos.setOnClickListener{
-            //val classNumber = arguments?.getString(FormHistoryPendingAdapter.CLASSNUMBER)
-            //val bundle = bundleOf(CLASS_NUMBER to classNumber.toString())
+            val classNumber = arguments?.getString(FormHistoryPendingAdapter.CLASSNUMBER)
+            val bundle = bundleOf(CLASS_NUMBER to classNumber.toString())
             formHistoryViewModel.updateFormHistory(id = formHistoryId!!)
-            findNavController().navigate(R.id.action_receiveDynamics3_to_receiveStatics2)//, bundle)
+            findNavController().navigate(R.id.action_receiveDynamics3_to_receiveStatics2, bundle)
         }
     }
     companion object {

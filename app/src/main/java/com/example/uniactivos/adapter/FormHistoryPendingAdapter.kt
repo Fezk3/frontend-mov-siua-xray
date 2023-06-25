@@ -48,10 +48,6 @@ class FormHistoryPendingAdapter : RecyclerView.Adapter<FormHistoryPendingViewHol
         const val CLASSNUMBER = "classNumber"
     }
 
-//No se ocuparia esto porque no se necesita pasar informacion
-//    companion object {
-//        const val CLASSROOM_ID = "class_number"
-//    }
 }
 class FormHistoryPendingViewHolder(
     val binding: PendingAssetsItemBinding
