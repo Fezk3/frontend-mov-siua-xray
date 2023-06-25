@@ -3,20 +3,65 @@ package com.example.uniactivos.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.uniactivos.model.AssetsDetails
+import com.example.uniactivos.model.ScheduleDetails
 import com.example.uniactivos.model.providers.StaticAssetProvider
+import com.example.uniactivos.repository.ScheduleRepository
+import com.example.uniactivos.repository.StaticAssetRepository
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
-class StaticAssetViewModel : ViewModel(){
+class StaticAssetViewModel(private val staticAssetRepository: StaticAssetRepository) : ViewModel() {
     val assetDetail =  MutableLiveData<AssetsDetails>()
     val assetDetailList = MutableLiveData<List<AssetsDetails>>()
+    val errorMessage = MutableLiveData<String>()
+    val loading = MutableLiveData<Boolean>()
+    var job: Job? = null
 
-    fun getStatAsset() {
-        val position = (0..2).random()
-        val _assetDetail = StaticAssetProvider.findById(position)
-        assetDetail.postValue(_assetDetail)
+    fun getStatByAssetTypeAndClassroomId(description : String, classroomId : Long) {
+        job = CoroutineScope(Dispatchers.IO).launch {
+            loading.postValue(true)
+            val response = staticAssetRepository.getByAssetTypeAndClassroomId(description, classroomId)
+            withContext(Dispatchers.Main) {
+                if (response.isSuccessful) {
+                    assetDetailList.postValue(response.body())
+                    loading.value = false
+                }else{
+                    onError("Error : ${response.message()}")
+                }
+            }
+        }
+    }
+
+    fun getStatByClassroomNumber(classroomNumber : String) {
+        job = CoroutineScope(Dispatchers.IO).launch {
+            loading.postValue(true)
+            val response = staticAssetRepository.getByAssetEstaticoAndClassroomId(classroomNumber)
+            withContext(Dispatchers.Main) {
+                if (response.isSuccessful) {
+                    assetDetailList.postValue(response.body())
+                    loading.value = false
+                }else{
+                    onError("Error : ${response.message()}")
+                }
+            }
+        }
     }
 
     fun findAllStatAssets() {
         val _assetDetailList = StaticAssetProvider.findAllAssets()
         assetDetailList.postValue(_assetDetailList)
+    }
+
+    private fun onError(message: String) {
+        errorMessage.value = message
+        loading.value = false
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        job?.cancel()
     }
 }

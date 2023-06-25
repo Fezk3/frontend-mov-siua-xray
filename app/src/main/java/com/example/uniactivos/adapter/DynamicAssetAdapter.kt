@@ -2,6 +2,7 @@ package com.example.uniactivos.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uniactivos.databinding.DynamicAssetItemBinding
 import com.example.uniactivos.model.AssetsDetails
